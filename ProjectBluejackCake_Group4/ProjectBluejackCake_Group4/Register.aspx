@@ -26,7 +26,7 @@
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Type="password"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Confirm Password:</td>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td>Date of Birth:</td>
-                <td><asp:TextBox ID="txtDOB" runat="server"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtDOB" runat="server" TextMode="Date"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Phone Number:</td>
@@ -45,7 +45,7 @@
                 <td><asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine"></asp:TextBox></td>
             </tr>
             <tr>
-                <td colspan="2"><asp:Button ID="btnRegister" runat="server" Text="Register"/></td>
+                <td colspan="2"><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"/></td>
             </tr>
             <tr>
                 <td colspan="2"><asp:Label ID="erMessage" runat="server" Text="" ForeColor="Red"></asp:Label></td>

@@ -211,6 +211,24 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.HyperLink hlTransaction;
         
         /// <summary>
+        /// hlTransactionReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlTransactionReport;
+        
+        /// <summary>
+        /// hlLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlLogout;
+        
+        /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>

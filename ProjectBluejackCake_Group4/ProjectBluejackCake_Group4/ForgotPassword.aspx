@@ -22,10 +22,7 @@
                 <td><asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox></td>
             </tr>
             <tr>
-                <td colspan="2"><asp:Button ID="btnSubmit" runat="server" Text="Submit"/></td>
-            </tr>
-            <tr>
-                <td colspan="2"><asp:Label ID="newPass" runat="server" Text="" ForeColor="Green"></asp:Label></td>
+                <td colspan="2"><asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"/></td>
             </tr>
             <tr>
                 <td colspan="2"><asp:Label ID="erMessage" runat="server" Text="" ForeColor="Red"></asp:Label></td>

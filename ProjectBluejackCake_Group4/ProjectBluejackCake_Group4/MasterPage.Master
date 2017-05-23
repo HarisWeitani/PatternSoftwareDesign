@@ -16,7 +16,7 @@
         - Tag <nav> untuk panel navigasi (Home, Cake, dll).
         - Tag <footer> untuk footer (copyright dan semacamnya).
         - ContentPlaceHolder untuk isi body nya (tiap halaman beda2).
-         --%>
+    --%>
     <form id="form1" runat="server">
         <%-- THE ALMIGHTY SCRIPT MANAGER --%>
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -30,14 +30,16 @@
 
             <%-- greeting to user and current date time (DONE)
                 - Timer di update tiap 1000 ms (1 detik)
-                --%>
+            --%>
             <div>
-                Welcome, <asp:Label ID="lblUserLogin" runat="server" Text=""></asp:Label> <br />
+                Welcome,
+                <asp:Label ID="lblUserLogin" runat="server" Text=""></asp:Label>
+                <br />
                 Date and time right now:
                 <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick"/>
+                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
                     </Triggers>
                     <ContentTemplate>
                         <asp:Label ID="lblDateTime" runat="server" Text=""></asp:Label>
@@ -48,24 +50,23 @@
         </header>
         <nav>
             <%-- Navigation Panel here --%>
-            <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink> |
-            <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink> |
-            <asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink> |
-            <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password</asp:HyperLink> |
-            <asp:HyperLink ID="hlPromotion" runat="server" NavigateUrl="~/Promotion.aspx">Promotion</asp:HyperLink> |
-            <asp:HyperLink ID="hlAddPromotion" runat="server" NavigateUrl="~/AddPromotion.aspx">Add Promotion</asp:HyperLink> |
-            <asp:HyperLink ID="hlUpdatePromotion" runat="server" NavigateUrl="~/UpdatePromotion.aspx">Update Promotion</asp:HyperLink> |
-            <asp:HyperLink ID="hlCake" runat="server" NavigateUrl="~/Cake.aspx">Cake</asp:HyperLink> |
-            <asp:HyperLink ID="hlAddCake" runat="server" NavigateUrl="~/AddCake.aspx">Add Cake</asp:HyperLink> |
-            <asp:HyperLink ID="hlUpdateCake" runat="server" NavigateUrl="~/UpdateCake.aspx">Update Cake</asp:HyperLink> |
-            <asp:HyperLink ID="hlProfile" runat="server" NavigateUrl="~/Profile.aspx">Profile</asp:HyperLink> |
-            <asp:HyperLink ID="hlChangePassword" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password</asp:HyperLink> |
-            <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx">View Customer</asp:HyperLink> |
-            <asp:HyperLink ID="hlCart" runat="server" NavigateUrl="~/Cart.aspx">Cart</asp:HyperLink> |
-            <asp:HyperLink ID="hlTransaction" runat="server" NavigateUrl="~/Transaction.aspx">>Transaction</asp:HyperLink> |
-            Transaction Report
-
-            | Logout
+            <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Home.aspx">| Home |</asp:HyperLink>
+            <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/Login.aspx">Login |</asp:HyperLink>
+            <asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Register.aspx">Register |</asp:HyperLink>
+            <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password |</asp:HyperLink>
+            <asp:HyperLink ID="hlPromotion" runat="server" NavigateUrl="~/Promotion.aspx">Promotion |</asp:HyperLink>
+            <asp:HyperLink ID="hlAddPromotion" runat="server" NavigateUrl="~/AddPromotion.aspx">Add Promotion |</asp:HyperLink>
+            <asp:HyperLink ID="hlUpdatePromotion" runat="server" NavigateUrl="~/UpdatePromotion.aspx">Update Promotion |</asp:HyperLink>
+            <asp:HyperLink ID="hlCake" runat="server" NavigateUrl="~/Cake.aspx">Cake |</asp:HyperLink>
+            <asp:HyperLink ID="hlAddCake" runat="server" NavigateUrl="~/AddCake.aspx">Add Cake |</asp:HyperLink>
+            <asp:HyperLink ID="hlUpdateCake" runat="server" NavigateUrl="~/UpdateCake.aspx">Update Cake |</asp:HyperLink>
+            <asp:HyperLink ID="hlProfile" runat="server" NavigateUrl="~/Profile.aspx">Profile |</asp:HyperLink>
+            <asp:HyperLink ID="hlChangePassword" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password |</asp:HyperLink>
+            <asp:HyperLink ID="hlViewCustomer" runat="server" NavigateUrl="~/ViewCustomer.aspx">View Customer |</asp:HyperLink>
+            <asp:HyperLink ID="hlCart" runat="server" NavigateUrl="~/Cart.aspx">Cart |</asp:HyperLink>
+            <asp:HyperLink ID="hlTransaction" runat="server" NavigateUrl="~/Transaction.aspx">Transaction |</asp:HyperLink>
+            <asp:HyperLink ID="hlTransactionReport" runat="server" NavigateUrl="~/TransactionReport.aspx">TransactionReport |</asp:HyperLink>
+            <asp:HyperLink ID="hlLogout" runat="server" NavigateUrl="~/Logout.aspx">Logout |</asp:HyperLink>
             <hr />
         </nav>
         <div>
