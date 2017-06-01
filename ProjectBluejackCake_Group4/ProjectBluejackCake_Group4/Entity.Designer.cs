@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Haris Weitani\Desktop\Project Smt4\PatternSoftwareDesign\ProjectBluejackCake_Group4\ProjectBluejackCake_Group4\Entity.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Git\PatternSoftwareDesign\ProjectBluejackCake_Group4\ProjectBluejackCake_Group4\Entity.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

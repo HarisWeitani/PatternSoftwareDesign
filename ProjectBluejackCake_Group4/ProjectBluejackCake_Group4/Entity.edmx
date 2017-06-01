@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BigDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BigDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cake">
           <Key>
             <PropertyRef Name="CakeId" />
@@ -41,6 +41,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerEmail" Type="varchar" MaxLength="50" />
           <Property Name="TransactionDate" Type="date" />
           <Property Name="CustomerName" Type="varchar" MaxLength="50" />
           <Property Name="CakeName" Type="varchar" MaxLength="50" />
@@ -56,8 +57,7 @@
           <EntitySet Name="Promotion" EntityType="Self.Promotion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TransactionHistory" EntityType="Self.TransactionHistory" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BigDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -92,11 +92,18 @@
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Discount" Type="Int32" />
         </EntityType>
+        <EntityContainer Name="BigDatabaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cakes" EntityType="Self.Cake" />
+          <EntitySet Name="Members" EntityType="Self.Member" />
+          <EntitySet Name="Promotions" EntityType="Self.Promotion" />
+          <EntitySet Name="TransactionHistories" EntityType="BigDatabaseModel.TransactionHistory" />
+        </EntityContainer>
         <EntityType Name="TransactionHistory">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TransactionDate" Type="DateTime" Precision="0" />
           <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CakeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -106,12 +113,6 @@
           <Property Name="PromotionDiscount" Type="Int32" />
           <Property Name="SubTotal" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="BigDatabaseEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Cakes" EntityType="Self.Cake" />
-          <EntitySet Name="Members" EntityType="Self.Member" />
-          <EntitySet Name="Promotions" EntityType="Self.Promotion" />
-          <EntitySet Name="TransactionHistories" EntityType="Self.TransactionHistory" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -155,15 +156,16 @@
           <EntitySetMapping Name="TransactionHistories">
             <EntityTypeMapping TypeName="BigDatabaseModel.TransactionHistory">
               <MappingFragment StoreEntitySet="TransactionHistory">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
-                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
-                <ScalarProperty Name="CakeName" ColumnName="CakeName" />
-                <ScalarProperty Name="CakePrice" ColumnName="CakePrice" />
-                <ScalarProperty Name="ChocolatePlateGreeting" ColumnName="ChocolatePlateGreeting" />
-                <ScalarProperty Name="PromotionTitle" ColumnName="PromotionTitle" />
-                <ScalarProperty Name="PromotionDiscount" ColumnName="PromotionDiscount" />
                 <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="PromotionDiscount" ColumnName="PromotionDiscount" />
+                <ScalarProperty Name="PromotionTitle" ColumnName="PromotionTitle" />
+                <ScalarProperty Name="ChocolatePlateGreeting" ColumnName="ChocolatePlateGreeting" />
+                <ScalarProperty Name="CakePrice" ColumnName="CakePrice" />
+                <ScalarProperty Name="CakeName" ColumnName="CakeName" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

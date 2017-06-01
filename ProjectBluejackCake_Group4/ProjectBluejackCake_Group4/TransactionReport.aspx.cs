@@ -11,7 +11,23 @@ namespace ProjectBluejackCake_Group4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Member currentUser = (Member)Session["userLogin"];
+            if (currentUser == null)
+            {
+                Response.Redirect("Home.aspx");
+            }
+            else if (currentUser != null)
+            {
+                
+                if (currentUser.Type == "Admin")
+                {
+                    
+                }
+                else if (currentUser.Type == "Customer")
+                {
+                    
+                }
+            }
         }
     }
 }

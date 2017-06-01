@@ -19,7 +19,23 @@
         Here you can view all the transaction that <asp:Label ID="lblTransaction" runat="server" Text=""></asp:Label> have made.<br /><br />
     </div>
     <div>
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" Visible="false">
+            <ContentTemplate>
+                <asp:GridView ID="GridView1" runat="server">
+                    <Columns>
+                        <asp:BoundField HeaderText="Transaction Date" DataField="TransactionDate"></asp:BoundField>
+                        <asp:BoundField HeaderText="Customer Name" DataField="CustomerName"></asp:BoundField>
+                        <asp:BoundField HeaderText="Cake Name" DataField="CakeName"></asp:BoundField>
+                        <asp:BoundField HeaderText="Cake Price" DataField="CakePrice"></asp:BoundField>
+                        <asp:BoundField HeaderText="Chocolate Plate Greeting" DataField="ChocolatePlateGreeting"></asp:BoundField>
+                        <asp:BoundField HeaderText="Promotion" DataField="PromotionTitle"></asp:BoundField>
+                        <asp:BoundField HeaderText="Discount" DataField="PromotionDiscount"></asp:BoundField>
+                        <asp:BoundField HeaderText="Subtotal" DataField="SubTotal"></asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
     </div>
     <div>
         <asp:Button ID="btnGenerateTransactionReport" runat="server" Text="Generate Transaction Report" />

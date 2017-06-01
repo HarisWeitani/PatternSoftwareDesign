@@ -15,6 +15,7 @@ namespace ProjectBluejackCake_Group4
     public partial class TransactionHistory
     {
         public int Id { get; set; }
+        public string CustomerEmail { get; set; }
         public Nullable<System.DateTime> TransactionDate { get; set; }
         public string CustomerName { get; set; }
         public string CakeName { get; set; }
