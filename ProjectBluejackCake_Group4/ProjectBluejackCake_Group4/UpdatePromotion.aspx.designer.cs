@@ -13,6 +13,15 @@ namespace ProjectBluejackCake_Group4 {
     public partial class UpdatePromotion {
         
         /// <summary>
+        /// viewUpdatePromo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView viewUpdatePromo;
+        
+        /// <summary>
         /// txtTitle control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace ProjectBluejackCake_Group4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        
+        /// <summary>
+        /// chkTitleUpd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator chkTitleUpd;
         
         /// <summary>
         /// txtDescription control.
@@ -31,6 +49,24 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
         
         /// <summary>
+        /// chkDescUpd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator chkDescUpd;
+        
+        /// <summary>
+        /// chkDescPromo3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator chkDescPromo3;
+        
+        /// <summary>
         /// txtDiscount control.
         /// </summary>
         /// <remarks>
@@ -40,13 +76,22 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.TextBox txtDiscount;
         
         /// <summary>
-        /// btnUpdatePromotion control.
+        /// chkDiscUpd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdatePromotion;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator chkDiscUpd;
+        
+        /// <summary>
+        /// chkDiscUpd2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator chkDiscUpd2;
         
         /// <summary>
         /// erMessage control.
@@ -56,6 +101,15 @@ namespace ProjectBluejackCake_Group4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label erMessage;
+        
+        /// <summary>
+        /// btnUpdatePromotion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdatePromotion;
         
         /// <summary>
         /// btnBack control.

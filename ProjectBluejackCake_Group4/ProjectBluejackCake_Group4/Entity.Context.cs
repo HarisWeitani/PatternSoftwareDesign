@@ -27,7 +27,7 @@ namespace ProjectBluejackCake_Group4
     
         public virtual DbSet<Cake> Cakes { get; set; }
         public virtual DbSet<Member> Members { get; set; }
-        public virtual DbSet<Promotion> Promotions { get; set; }
         public virtual DbSet<TransactionHistory> TransactionHistories { get; set; }
+        public virtual DbSet<Promotion> Promotions { get; set; }
     }
 }

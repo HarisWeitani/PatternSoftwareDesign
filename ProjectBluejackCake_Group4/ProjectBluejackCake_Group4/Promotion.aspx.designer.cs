@@ -13,22 +13,22 @@ namespace ProjectBluejackCake_Group4 {
     public partial class Promotion {
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// viewPromotion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.GridView viewPromotion;
         
         /// <summary>
-        /// GridView1 control.
+        /// lblErrProm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label lblErrProm;
         
         /// <summary>
         /// btnAddPromotion control.
@@ -38,5 +38,14 @@ namespace ProjectBluejackCake_Group4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddPromotion;
+        
+        /// <summary>
+        /// btnUpdatePromotion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdatePromotion;
     }
 }

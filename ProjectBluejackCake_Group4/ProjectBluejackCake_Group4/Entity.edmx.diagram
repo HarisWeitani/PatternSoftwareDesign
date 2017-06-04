@@ -7,8 +7,8 @@
       <Diagram DiagramId="ece69bcf6ea446c4812e102bb7f6ca2f" Name="Diagram1">
         <EntityTypeShape EntityType="BigDatabaseModel.Cake" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BigDatabaseModel.Member" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BigDatabaseModel.Promotion" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BigDatabaseModel.TransactionHistory" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BigDatabaseModel.TransactionHistory" Width="1.5" PointX="7" PointY="1.375" />
+        <EntityTypeShape EntityType="BigDatabaseModel.Promotion" Width="1.5" PointX="4.625" PointY="1.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
