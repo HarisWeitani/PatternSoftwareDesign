@@ -18,13 +18,14 @@ namespace ProjectBluejackCake_Group4
             }
             else if (currentUser != null)
             {
-                lblTransaction.Text = currentUser.Name;
                 if (currentUser.Type == "Admin")
                 {
+                    lblTransaction.Text = "all the customer";
                     loadDataAdmin();
                 }
                 else if (currentUser.Type == "Customer")
                 {
+                    lblTransaction.Text = "you";
                     loadDataMember(currentUser.Email);
                 }
             }
@@ -40,6 +41,11 @@ namespace ProjectBluejackCake_Group4
         {
             GridView1.DataSource = TransactionRepositories.getTransactionByEmail(email);
             GridView1.DataBind();
+        }
+
+        protected void btnGenerateTransactionReport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TransactionReport.aspx");
         }
     }
 }
