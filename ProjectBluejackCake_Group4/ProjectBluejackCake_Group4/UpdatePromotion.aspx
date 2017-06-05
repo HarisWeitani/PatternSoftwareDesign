@@ -42,6 +42,7 @@
                     <asp:TextBox ID="txtDescription" runat="server" placeholder="Promotion Description"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="chkDescUpd" runat="server" ControlToValidate="txtDescription" ErrorMessage="Promotion Description must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtDescription" ID="chkDescPromo3" ValidationExpression = "^[\s\S]{1,20}$" runat="server" ErrorMessage="Maximum 20 characters allowed!" ForeColor="Red" Font-Italic="true"></asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td>Discount:</td>

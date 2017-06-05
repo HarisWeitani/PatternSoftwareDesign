@@ -8,9 +8,8 @@ using System.Web.UI.WebControls;
 
 namespace ProjectBluejackCake_Group4
 {
-    public partial class Promotion : System.Web.UI.Page
+    public partial class PromotionPage : System.Web.UI.Page
     {
-
         void loadData()
         {
             viewPromotion.DataSource = PromotionRepositories.getAllPromo();
@@ -19,7 +18,17 @@ namespace ProjectBluejackCake_Group4
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadData();
+            if (Session["userLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            else
+            {
+                loadData();
+            } 
+
+            
         }
 
         protected void viewPromotion_RowDeleting(object sender, GridViewDeleteEventArgs e)

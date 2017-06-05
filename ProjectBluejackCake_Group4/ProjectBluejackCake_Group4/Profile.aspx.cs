@@ -11,7 +11,15 @@ namespace ProjectBluejackCake_Group4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["userLogin"] == null) Response.Redirect("Login.aspx");
 
+            Member currUser = (Member)Session["userLogin"];
+
+            lblName.Text = currUser.Name;
+            lblEmail.Text = currUser.Email;
+            lblDOB.Text = currUser.DOB.ToString();
+            lblPhone.Text = currUser.PhoneNumber;
+            lblAddress.Text = currUser.Address;
         }
     }
 }

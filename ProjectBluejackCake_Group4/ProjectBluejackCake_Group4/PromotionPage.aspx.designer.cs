@@ -10,7 +10,7 @@
 namespace ProjectBluejackCake_Group4 {
     
     
-    public partial class Promotion {
+    public partial class PromotionPage {
         
         /// <summary>
         /// viewPromotion control.

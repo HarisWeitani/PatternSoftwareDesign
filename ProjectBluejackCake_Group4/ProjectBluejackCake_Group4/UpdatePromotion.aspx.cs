@@ -19,7 +19,16 @@ namespace ProjectBluejackCake_Group4
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadData();
+            if (Session["userLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            else
+            {
+                loadData();
+            }
+
         }
 
         protected void btnUpdatePromotion_Click(object sender, EventArgs e)
@@ -45,7 +54,7 @@ namespace ProjectBluejackCake_Group4
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Promotion.aspx");
+            Response.Redirect("PromotionPage.aspx");
         }
     }
 }
