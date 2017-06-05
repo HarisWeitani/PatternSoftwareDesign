@@ -1378,6 +1378,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entity.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Factory\CakeFactory.cs" />
+    <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\MemberFactory.cs" />
     <Compile Include="Factory\PromotionFactory.cs" />
     <Compile Include="ForgotPassword.aspx.cs">
@@ -1387,6 +1389,7 @@
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1422,6 +1425,8 @@
       <DependentUpon>Entity.tt</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Repositories\CakeRepositories.cs" />
+    <Compile Include="Repositories\CartRepository.cs" />
     <Compile Include="Repositories\MemberRepositories.cs" />
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

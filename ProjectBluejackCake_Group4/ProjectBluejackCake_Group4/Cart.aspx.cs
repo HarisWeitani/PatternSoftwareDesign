@@ -13,5 +13,15 @@ namespace ProjectBluejackCake_Group4
         {
 
         }
+
+        protected void viewAllCart_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void btnCheckOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

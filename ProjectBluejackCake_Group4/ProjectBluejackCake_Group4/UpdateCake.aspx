@@ -15,31 +15,56 @@
         NOTE: YOU NEED TO UPLOAD CAKE PICTURE AGAIN<br /><br />
     </div>
     <div>
+        <asp:GridView ID="viewUpdateCake" runat="server" AutoGenerateColumns="false">
+            <Columns>
+                <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
+                <asp:BoundField DataField="CakePrice" HeaderText="Cake Price" />
+                <asp:BoundField DataField="CakeStock" HeaderText="Cake Stock" />
+                <asp:BoundField DataField="CakePicture" HeaderText="Cake Picture" />
+            </Columns>
+        </asp:GridView>
+
+        <br />
+        <br />
+
         <table>
             <tr>
                 <td>New Cake Name:</td>
-                <td><asp:TextBox ID="txtCakeName" runat="server"></asp:TextBox></td>
+                <td>
+                    <asp:TextBox ID="txtCakeName" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="chkCakeName" runat="server" ControlToValidate="txtCakeName" ErrorMessage="Cake name must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td>New Cake Price:</td>
-                <td><asp:TextBox ID="txtCakePrice" runat="server"></asp:TextBox></td>
+                <td>
+                    <asp:TextBox ID="txtCakePrice" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="chkCakePrice" runat="server" ControlToValidate="txtCakePrice" ErrorMessage="Cake price must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
                 <td>New Cake Stock:</td>
-                <td><asp:TextBox ID="txtCakeStock" runat="server"></asp:TextBox></td>
+                <td>
+                    <asp:TextBox ID="txtCakeStock" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="chkCakeStock" runat="server" ControlToValidate="txtCakeStock" ErrorMessage="Cake stock must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator Display="Dynamic" ID="chkCakeStock2" runat="server" ControlToValidate="txtCakeStock" ValidationExpression="^[1-9][0-9]*$" ErrorMessage="Value must be greater than 0!" ForeColor="Red" Font-Italic="true"></asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td>New Cake Picture:</td>
-                <td><asp:FileUpload ID="uplCakePicture" runat="server" /></td>
+                <td>
+                    <asp:FileUpload ID="uplCakePicture" runat="server" />
+                    <asp:RequiredFieldValidator ID="chkCakePicture" runat="server" ControlToValidate="uplCakePicture" ErrorMessage="Cake picture must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             <tr>
-                <td colspan="2"><asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake"/></td>
+                <td colspan="2"><asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake" OnClick="btnUpdateCake_Click"/></td>
             </tr>
             <tr>
                 <td colspan="2"><asp:Label ID="erMessage" runat="server" Text=""></asp:Label></td>
             </tr>
             <tr>
-                <td colspan="2"><asp:Button ID="btnBack" runat="server" Text="Back to Cake page"/></td>
+                <td colspan="2"><asp:Button ID="btnBack" runat="server" Text="Back to Cake page" onClick="btnBack_Click"/></td>
             </tr>
         </table>
     </div>

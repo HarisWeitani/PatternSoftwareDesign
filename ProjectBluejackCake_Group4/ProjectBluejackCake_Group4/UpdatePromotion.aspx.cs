@@ -41,7 +41,6 @@ namespace ProjectBluejackCake_Group4
                 loadData();
             }
 
-            
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

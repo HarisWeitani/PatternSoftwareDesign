@@ -21,13 +21,27 @@
     <div>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server" Visible="false">
             <ContentTemplate>
-                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                <asp:GridView ID="ViewAllCake" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
+                    <Columns>
+                        <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
+                        <asp:BoundField DataField="CakePicture" HeaderText="Cake Picture" />
+                        <asp:BoundField DataField="CakeStock" HeaderText="Cake Stock" />
+                        <asp:BoundField DataField="CakePrice" HeaderText="Cake Price" />
+                        <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add To Cart"/>
+                        <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" /> 
+                    </Columns>
+                </asp:GridView>
             </ContentTemplate>
         </asp:UpdatePanel>
         <br />
     </div>
+    <asp:Button ID="btnViewCart" runat="server" Text="View Cart" onclick="btnViewCart_Click"/>
     <div>
         <%-- Validasi supaya keliatan oleh admin doang --%>
-        <asp:Button ID="btnAddCake" runat="server" Text="Add Cake" />
+        <asp:Button ID="btnAddCake" runat="server" Text="Add Cake" Onclick="btnAddCake_Click"/>
+        <asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake"  onclick="btnUpdateCake_Click"/>
     </div>
+    
+
+    <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red" Font-Bold="true" Font-Italic="true"></asp:Label>
 </asp:Content>
