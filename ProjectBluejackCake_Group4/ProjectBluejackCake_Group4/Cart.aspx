@@ -16,9 +16,20 @@
         Here you can view, remove, and check out all the data in the cart.<br /><br />
     </div>
     <div>
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:GridView ID="viewAllCart" runat="server" AutoGenerateColumns="false" OnRowDeleting="viewAllCart_RowDeleting">
+            <Columns>
+                <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
+                <asp:BoundField DataField="CakePrice" HeaderText="Cake Price" />
+                <asp:BoundField DataField="ChocoPlateGreeting" HeaderText="Chocolate Plate Greeting" />
+                <asp:BoundField DataField="Promotion" HeaderText="Promotion" />
+                <asp:BoundField DataField="Discount" HeaderText="Discount" />
+                <asp:BoundField DataField="SubTotal" HeaderText="Sub Total" />
+                <asp:BoundField DataField="GrandTotal" HeaderText="Grand Total" />
+                <asp:ButtonField ButtonType="Button" CommandName="Remove" Text="Remove" />
+            </Columns>
+        </asp:GridView>
     </div>
     <div>
-        <asp:Button ID="btnCheckOut" runat="server" Text="Check Out" />
+        <asp:Button ID="btnCheckOut" runat="server" Text="Check Out" onclick="btnCheckOut_Click"/>
     </div>
 </asp:Content>
