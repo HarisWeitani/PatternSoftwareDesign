@@ -14,7 +14,7 @@ namespace ProjectBluejackCake_Group4
     
     public partial class Promotion
     {
-        public new string Title { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
         public Nullable<int> Discount { get; set; }
     }
