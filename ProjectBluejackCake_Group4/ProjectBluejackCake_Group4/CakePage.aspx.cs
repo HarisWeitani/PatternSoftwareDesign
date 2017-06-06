@@ -37,7 +37,7 @@ namespace ProjectBluejackCake_Group4
             Cake c = CakeRepositories.getCake(Cake_Name);
             int row = CakeRepositories.deleteCake(c);
             lblError.Text = "Deletion Success!";
-            if(row>0)
+            if (row > 0)
             {
                 loadData();
             }

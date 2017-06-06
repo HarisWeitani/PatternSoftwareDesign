@@ -1254,7 +1254,7 @@
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
-    <Content Include="Cake.aspx" />
+    <Content Include="CakePage.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Entity.Context.tt">
@@ -1327,16 +1327,16 @@
     <Compile Include="AddPromotion.aspx.designer.cs">
       <DependentUpon>AddPromotion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cake.aspx.cs">
-      <DependentUpon>Cake.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cake.aspx.designer.cs">
-      <DependentUpon>Cake.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Cake.cs">
       <DependentUpon>Entity.tt</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CakePage.aspx.cs">
+      <DependentUpon>CakePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CakePage.aspx.designer.cs">
+      <DependentUpon>CakePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
@@ -1345,6 +1345,7 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CartData.cs" />
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1379,7 +1380,6 @@
       <DependentUpon>Entity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Factory\CakeFactory.cs" />
-    <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\MemberFactory.cs" />
     <Compile Include="Factory\PromotionFactory.cs" />
     <Compile Include="ForgotPassword.aspx.cs">
@@ -1432,7 +1432,6 @@
       <DependentUpon>PromotionPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Repositories\CakeRepositories.cs" />
-    <Compile Include="Repositories\CartRepository.cs" />
     <Compile Include="Repositories\MemberRepositories.cs" />
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
