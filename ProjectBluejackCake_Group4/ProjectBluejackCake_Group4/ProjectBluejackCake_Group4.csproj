@@ -1406,6 +1406,7 @@
       <DependentUpon>Entity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Factory\CakeFactory.cs" />
+    <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\MemberFactory.cs" />
     <Compile Include="Factory\PromotionFactory.cs" />
     <Compile Include="Factory\TransactionFactory.cs" />
