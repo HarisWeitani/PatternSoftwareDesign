@@ -1368,6 +1368,7 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controller\MemberController.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="CrystalReportTransaction.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1397,6 +1398,7 @@
     <Compile Include="Factory\CakeFactory.cs" />
     <Compile Include="Factory\MemberFactory.cs" />
     <Compile Include="Factory\PromotionFactory.cs" />
+    <Compile Include="Factory\TransactionFactory.cs" />
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1407,6 +1409,7 @@
     <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\MemberHandler.cs" />
     <Compile Include="Handler\PromotionHandler.cs" />
+    <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

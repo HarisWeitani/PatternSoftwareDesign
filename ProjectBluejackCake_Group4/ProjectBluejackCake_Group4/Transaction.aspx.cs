@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectBluejackCake_Group4.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -33,13 +34,13 @@ namespace ProjectBluejackCake_Group4
 
         protected void loadDataAdmin()
         {
-            GridView1.DataSource = TransactionRepositories.getAllTransaction();
+            GridView1.DataSource = TransactionController.getAllTransaction();
             GridView1.DataBind();
         }
 
         void loadDataMember(String email)
         {
-            GridView1.DataSource = TransactionRepositories.getTransactionByEmail(email);
+            GridView1.DataSource = TransactionController.getTransactionByEmail(email);
             GridView1.DataBind();
         }
 
