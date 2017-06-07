@@ -26,7 +26,8 @@ namespace ProjectBluejackCake_Group4
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Member member = MemberRepositories.LoginUser(txtEmail.Text, txtPassword.Text);
+            //Member member = MemberRepositories.LoginUser(txtEmail.Text, txtPassword.Text);
+            Member member = Handler.MemberHandler.login(txtEmail.Text, txtPassword.Text);
 
             erMessage.Text = "";
             erMessage.ForeColor = System.Drawing.Color.Red;

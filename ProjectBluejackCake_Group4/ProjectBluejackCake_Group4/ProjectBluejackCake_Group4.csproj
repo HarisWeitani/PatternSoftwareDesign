@@ -1254,6 +1254,7 @@
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="Cake.aspx" />
     <Content Include="CakePage.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -1327,6 +1328,13 @@
     <Compile Include="AddPromotion.aspx.designer.cs">
       <DependentUpon>AddPromotion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cake.aspx.cs">
+      <DependentUpon>Cake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cake.aspx.designer.cs">
+      <DependentUpon>Cake.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cake.cs">
       <DependentUpon>Entity.tt</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1353,6 +1361,7 @@
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controller\MemberController.cs" />
     <Compile Include="CrystalReportTransaction.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1390,6 +1399,7 @@
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Handler\CartHandler.cs" />
+    <Compile Include="Handler\MemberHandler.cs" />
     <Compile Include="Handler\PromotionHandler.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -1433,6 +1443,7 @@
       <DependentUpon>PromotionPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Repositories\CakeRepositories.cs" />
+    <Compile Include="Repositories\CartRepository.cs" />
     <Compile Include="Repositories\MemberRepositories.cs" />
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
