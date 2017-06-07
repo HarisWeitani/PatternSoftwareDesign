@@ -19,14 +19,14 @@
         Only registered customer can buy cake.<br /><br />
     </div>
     <div>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server" Visible="false">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" Visible="true">
             <ContentTemplate>
                 <asp:GridView ID="ViewAllCake" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
                     <Columns>
                         <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
-                        <asp:BoundField DataField="CakePicture" HeaderText="Cake Picture" />
-                        <asp:BoundField DataField="CakeStock" HeaderText="Cake Stock" />
-                        <asp:BoundField DataField="CakePrice" HeaderText="Cake Price" />
+                        <asp:BoundField DataField="Picture" HeaderText="Cake Picture" />
+                        <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
+                        <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                         <asp:ButtonField ButtonType="Button" Text="Add To Cart" CommandName="Select"/>
                         <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" /> 
                     </Columns>

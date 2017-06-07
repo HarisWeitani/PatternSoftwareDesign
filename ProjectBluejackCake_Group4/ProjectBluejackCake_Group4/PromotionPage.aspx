@@ -4,12 +4,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- PROMOTION PAGE NOTE:
-        - Accessible by admin only.
-        - Show all promotion created by admin.
-        - Promotion Title, Description, Discount.
-        - Button Add Promotion, Update Promotion, Delete Promotion.
-    --%>
+
+
     <h3>Promotion Page
     </h3>
     <div>

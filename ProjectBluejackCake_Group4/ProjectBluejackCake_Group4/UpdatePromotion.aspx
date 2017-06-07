@@ -3,11 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- UPDATE PROMOTION PAGE NOTE:
-        - Accessible by admin only.
-        - Admin bisa update promotion.
-        - Error message jika validasi salah.
-    --%>
+
     <h3>Update Promotion Page
     </h3>
     <div>

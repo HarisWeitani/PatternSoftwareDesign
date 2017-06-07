@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectBluejackCake_Group4.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,13 @@ namespace ProjectBluejackCake_Group4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<Promotion> x = PromotionController.getAll();
 
+
+
+            lblTitle.Text = x.Last().Title;
+            lblDesc.Text = x.Last().Description;
+            lblDiscount.Text = x.Last().Discount.ToString();
         }
     }
 }

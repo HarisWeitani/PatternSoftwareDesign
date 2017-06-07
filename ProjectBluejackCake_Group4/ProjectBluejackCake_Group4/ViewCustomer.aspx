@@ -3,14 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- VIEW CUSTOMER PAGE NOTE:
-        - Accessible by admin only.
-        - Name, Email, DOB, Phone, Address.
-        - Delete selected customer.
-        -
-        - PENTING: gw gk tau admin data tampilin juga atau kgk, ini cuma ngide doang.
-        -
-    --%>
+
     <h3>View Customer Page
     </h3>
     <div>
