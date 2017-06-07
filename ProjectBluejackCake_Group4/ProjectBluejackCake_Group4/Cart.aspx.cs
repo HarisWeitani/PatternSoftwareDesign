@@ -14,6 +14,20 @@ namespace ProjectBluejackCake_Group4
 
         }
 
+        void loadData()
+        {
+            int grandTotal = 0;
+
+            var cart = (List<CartSession>)Session["cartSessionData"];
+            
+            foreach(CartSession c in cart)
+            {
+                grandTotal += c.subTotal;
+            }
+
+            txtGrandTotal.Text = grandTotal.ToString();
+        }
+
         protected void viewAllCart_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
 

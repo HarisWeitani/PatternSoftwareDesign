@@ -49,6 +49,7 @@ namespace ProjectBluejackCake_Group4
                 Response.Cookies["userCookies"].Value = txtEmail.Text;
 
                 Session["userLogin"] = member;
+                Session["cartSessionData"] = new List<CartSession>();
 
                 Response.Redirect("Home.aspx");
 
