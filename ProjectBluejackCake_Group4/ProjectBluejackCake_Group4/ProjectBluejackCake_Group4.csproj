@@ -1254,6 +1254,7 @@
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="BuyCake.aspx" />
     <Content Include="Cake_Page.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -1338,6 +1339,13 @@
     <Compile Include="AddPromotion.aspx.designer.cs">
       <DependentUpon>AddPromotion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BuyCake.aspx.cs">
+      <DependentUpon>BuyCake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuyCake.aspx.designer.cs">
+      <DependentUpon>BuyCake.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cake.cs">
       <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
@@ -1360,6 +1368,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CartData.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CartSession.cs" />
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1397,6 +1406,7 @@
       <DependentUpon>Entity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Factory\CakeFactory.cs" />
+    <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\MemberFactory.cs" />
     <Compile Include="Factory\PromotionFactory.cs" />
     <Compile Include="Factory\TransactionFactory.cs" />
