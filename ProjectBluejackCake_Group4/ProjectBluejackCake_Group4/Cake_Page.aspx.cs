@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace ProjectBluejackCake_Group4
 {
-    public partial class Cake : System.Web.UI.Page
+    public partial class Cake_Page : System.Web.UI.Page
     {
         void loadData()
         {
@@ -41,6 +41,12 @@ namespace ProjectBluejackCake_Group4
             {
                 loadData();
             }
+        }
+
+        protected void Select(object sender, GridViewDeleteEventArgs e)
+        {
+            String Cake_Name = ViewAllCake.Rows[e.RowIndex].Cells[0].Text;
+            Cake c = CakeRepositories.getCake(Cake_Name);
         }
 
         protected void btnViewCart_Click(object sender, EventArgs e)

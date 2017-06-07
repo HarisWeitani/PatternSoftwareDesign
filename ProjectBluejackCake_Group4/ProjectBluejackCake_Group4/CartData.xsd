@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CartData" targetNamespace="http://tempuri.org/CartData.xsd" xmlns:mstns="http://tempuri.org/CartData.xsd" xmlns="http://tempuri.org/CartData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BigDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BigDatabaseConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BigDatabaseConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CartData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CartData" msprop:Generator_UserDSName="CartData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CartDataTable" msprop:Generator_TableClassName="CartDataTableDataTable" msprop:Generator_TableVarName="tableCartDataTable" msprop:Generator_TablePropName="CartDataTable" msprop:Generator_RowDeletingName="CartDataTableRowDeleting" msprop:Generator_RowChangingName="CartDataTableRowChanging" msprop:Generator_RowEvHandlerName="CartDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CartDataTableRowDeleted" msprop:Generator_UserTableName="CartDataTable" msprop:Generator_RowChangedName="CartDataTableRowChanged" msprop:Generator_RowEvArgName="CartDataTableRowChangeEvent" msprop:Generator_RowClassName="CartDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CakeName" msprop:Generator_ColumnVarNameInTable="columnCakeName" msprop:Generator_ColumnPropNameInRow="CakeName" msprop:Generator_ColumnPropNameInTable="CakeNameColumn" msprop:Generator_UserColumnName="CakeName" type="xs:string" minOccurs="0" />
+              <xs:element name="CakePrice" msprop:Generator_ColumnVarNameInTable="columnCakePrice" msprop:Generator_ColumnPropNameInRow="CakePrice" msprop:Generator_ColumnPropNameInTable="CakePriceColumn" msprop:Generator_UserColumnName="CakePrice" type="xs:string" minOccurs="0" />
+              <xs:element name="PromotionTitle" msprop:Generator_ColumnVarNameInTable="columnPromotionTitle" msprop:Generator_ColumnPropNameInRow="PromotionTitle" msprop:Generator_ColumnPropNameInTable="PromotionTitleColumn" msprop:Generator_UserColumnName="PromotionTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="cgp" msprop:Generator_ColumnVarNameInTable="columncgp" msprop:Generator_ColumnPropNameInRow="cgp" msprop:Generator_ColumnPropNameInTable="cgpColumn" msprop:Generator_UserColumnName="cgp" type="xs:string" minOccurs="0" />
+              <xs:element name="SubTotal" msprop:Generator_ColumnVarNameInTable="columnSubTotal" msprop:Generator_ColumnPropNameInRow="SubTotal" msprop:Generator_ColumnPropNameInTable="SubTotalColumn" msprop:Generator_UserColumnName="SubTotal" type="xs:string" minOccurs="0" />
+              <xs:element name="GrandTotal" msprop:Generator_ColumnVarNameInTable="columnGrandTotal" msprop:Generator_ColumnPropNameInRow="GrandTotal" msprop:Generator_ColumnPropNameInTable="GrandTotalColumn" msprop:Generator_UserColumnName="GrandTotal" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

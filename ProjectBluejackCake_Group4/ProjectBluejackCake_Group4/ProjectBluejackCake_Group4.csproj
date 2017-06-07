@@ -1254,8 +1254,7 @@
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
-    <Content Include="Cake.aspx" />
-    <Content Include="CakePage.aspx" />
+    <Content Include="Cake_Page.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Entity.Context.tt">
@@ -1286,6 +1285,17 @@
     </Content>
     <Content Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="CartData.xsc">
+      <DependentUpon>CartData.xsd</DependentUpon>
+    </Content>
+    <None Include="CartData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CartData.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="CartData.xss">
+      <DependentUpon>CartData.xsd</DependentUpon>
     </Content>
     <None Include="DataSet1.xsd">
       <SubType>Designer</SubType>
@@ -1328,23 +1338,15 @@
     <Compile Include="AddPromotion.aspx.designer.cs">
       <DependentUpon>AddPromotion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cake.aspx.cs">
-      <DependentUpon>Cake.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cake.aspx.designer.cs">
-      <DependentUpon>Cake.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Cake.cs">
       <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cake_Page.aspx.cs">
+      <DependentUpon>Cake_Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CakePage.aspx.cs">
-      <DependentUpon>CakePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CakePage.aspx.designer.cs">
-      <DependentUpon>CakePage.aspx</DependentUpon>
+    <Compile Include="Cake_Page.aspx.designer.cs">
+      <DependentUpon>Cake_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
@@ -1353,7 +1355,11 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CartData.cs" />
+    <Compile Include="CartData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CartData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1443,7 +1449,6 @@
       <DependentUpon>PromotionPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Repositories\CakeRepositories.cs" />
-    <Compile Include="Repositories\CartRepository.cs" />
     <Compile Include="Repositories\MemberRepositories.cs" />
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

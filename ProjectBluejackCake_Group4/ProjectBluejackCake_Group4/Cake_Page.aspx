@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Cake.aspx.cs" Inherits="ProjectBluejackCake_Group4.Cake" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Cake_Page.aspx.cs" Inherits="ProjectBluejackCake_Group4.Cake_Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -27,7 +27,7 @@
                         <asp:BoundField DataField="CakePicture" HeaderText="Cake Picture" />
                         <asp:BoundField DataField="CakeStock" HeaderText="Cake Stock" />
                         <asp:BoundField DataField="CakePrice" HeaderText="Cake Price" />
-                        <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add To Cart"/>
+                        <asp:ButtonField ButtonType="Button" Text="Add To Cart" CommandName="Select"/>
                         <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" /> 
                     </Columns>
                 </asp:GridView>
@@ -37,11 +37,12 @@
     </div>
     <asp:Button ID="btnViewCart" runat="server" Text="View Cart" onclick="btnViewCart_Click"/>
     <div>
-        <%-- Validasi supaya keliatan oleh admin doang --%>
-        <asp:Button ID="btnAddCake" runat="server" Text="Add Cake" Onclick="btnAddCake_Click"/>
-        <asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake"  onclick="btnUpdateCake_Click"/>
+        <%-- Validasi supaya keliatan oleh admin doang --%>  
+        <asp:Button ID="btnAddCake" runat="server" Text="Add Cake" Onclick="btnAddCake_Click" CausesValidation="false"/>
+        <asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake"  onclick="btnUpdateCake_Click" CausesValidation="false"/>
     </div>
     
 
     <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red" Font-Bold="true" Font-Italic="true"></asp:Label>
 </asp:Content>
+

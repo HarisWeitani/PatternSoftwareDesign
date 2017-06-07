@@ -10,7 +10,7 @@
 namespace ProjectBluejackCake_Group4 {
     
     
-    public partial class Cake {
+    public partial class Cake_Page {
         
         /// <summary>
         /// UpdatePanel1 control.
