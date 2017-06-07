@@ -22,10 +22,5 @@ namespace ProjectBluejackCake_Group4.Handler
         {
             return PromotionRepositories.getAllPromo();
         }
-
-        public static void delete(String title)
-        {
-
-        }
     }
 }

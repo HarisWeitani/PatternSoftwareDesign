@@ -11,7 +11,10 @@ namespace ProjectBluejackCake_Group4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["userLogin"] == null) Response.Redirect("Login.aspx");
+            if (Session["userLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            } 
 
             Member currUser = (Member)Session["userLogin"];
 

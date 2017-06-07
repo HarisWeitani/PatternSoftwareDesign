@@ -18,9 +18,9 @@
         <asp:GridView ID="viewUpdateCake" runat="server" AutoGenerateColumns="false">
             <Columns>
                 <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
-                <asp:BoundField DataField="CakePrice" HeaderText="Cake Price" />
-                <asp:BoundField DataField="CakeStock" HeaderText="Cake Stock" />
-                <asp:BoundField DataField="CakePicture" HeaderText="Cake Picture" />
+                <asp:BoundField DataField="Price" HeaderText="Cake Price" />
+                <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
+                <asp:BoundField DataField="Picture" HeaderText="Cake Picture" />
             </Columns>
         </asp:GridView>
 

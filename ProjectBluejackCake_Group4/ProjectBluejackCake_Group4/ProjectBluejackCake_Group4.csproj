@@ -1368,6 +1368,7 @@
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controller\MemberController.cs" />
+    <Compile Include="Controller\PromotionController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="CrystalReportTransaction.cs">
       <AutoGen>True</AutoGen>

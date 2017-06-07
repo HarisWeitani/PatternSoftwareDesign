@@ -3,10 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- PROMOTION PAGE NOTE:
-        - Accessible by customer & admin only.
-        - Email, Name, DOB, Phone, Address
-    --%>
+
+
     <h3>Profile Page
     </h3>
     <div>

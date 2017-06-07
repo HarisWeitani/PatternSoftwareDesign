@@ -51,7 +51,7 @@
                 <td colspan="2"><asp:Label ID="erMessage" runat="server" Text=""></asp:Label></td>
             </tr>
             <tr>
-                <td colspan="2"><asp:Button ID="btnBack" runat="server" Text="Back to Cake page" OnClick="btnBack_Click"/></td>
+                <td colspan="2"><asp:Button ID="btnBack" runat="server" Text="Back to Cake page" OnClick="btnBack_Click" CausesValidation="false"/></td>
             </tr>
         </table>
     </div>
