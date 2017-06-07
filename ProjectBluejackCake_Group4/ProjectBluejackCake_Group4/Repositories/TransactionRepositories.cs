@@ -9,6 +9,12 @@ namespace ProjectBluejackCake_Group4
     {
         static BigDatabaseEntities1 db = new BigDatabaseEntities1();
 
+        public static int insertTransaction(TransactionHistory trans)
+        {
+            db.TransactionHistories.Add(trans);
+            return db.SaveChanges();
+        }
+
         public static List<TransactionHistory> getAllTransaction()
         {
             return db.TransactionHistories.ToList<TransactionHistory>();

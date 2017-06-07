@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectBluejackCake_Group4.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,13 +23,13 @@ namespace ProjectBluejackCake_Group4
                 {
                     CrystalReportTransaction tr = new CrystalReportTransaction();
                     CrystalReportViewer1.ReportSource = tr;
-                    tr.SetDataSource(GetData(TransactionRepositories.getAllTransaction()));
+                    tr.SetDataSource(GetData(TransactionController.getAllTransaction()));
                 }
                 else if (currentUser.Type == "Customer")
                 {
                     CrystalReportTransaction tr = new CrystalReportTransaction();
                     CrystalReportViewer1.ReportSource = tr;
-                    tr.SetDataSource(GetData(TransactionRepositories.getTransactionByEmail(currentUser.Email)));
+                    tr.SetDataSource(GetData(TransactionController.getTransactionByEmail(currentUser.Email)));
                 }
             }
         }
