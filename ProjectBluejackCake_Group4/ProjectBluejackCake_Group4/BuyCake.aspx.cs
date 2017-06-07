@@ -29,7 +29,7 @@ namespace ProjectBluejackCake_Group4
 
         void loadCake(String cakeName)
         {
-            Cake c = CakeRepositories.getCake("cakeName");
+            Cake c = CakeRepositories.getCake(cakeName);
 
             txtCakeName.Text = c.CakeName;
             txtCakePrice.Text = c.Price.ToString();
@@ -66,6 +66,8 @@ namespace ProjectBluejackCake_Group4
 
                 var cart = (List<CartSession>)Session["cartSessionData"];
                 cart.Add(newCart);
+
+                erMessage.Text = "Success";
             }
         }
 

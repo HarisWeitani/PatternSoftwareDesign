@@ -47,11 +47,20 @@ namespace ProjectBluejackCake_Group4
         {
             String Cake_Name = ViewAllCake.Rows[e.RowIndex].Cells[0].Text;
             Cake c = CakeRepositories.getCake(Cake_Name);
+
+            Response.Redirect("BuyCake.aspx?cName=" + Cake_Name);
         }
 
         protected void btnViewCart_Click(object sender, EventArgs e)
         {
             Response.Redirect("Cart.aspx");
+        }
+
+        protected void btnAddToCart_Command(object sender, CommandEventArgs e)
+        {
+            String Cake_Name = e.CommandArgument.ToString();
+
+            Response.Redirect("BuyCake.aspx?cName=" + Cake_Name);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace ProjectBluejackCake_Group4
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Cake.aspx");
+            Response.Redirect("Cake_Page.aspx");
         }
     }
 }
