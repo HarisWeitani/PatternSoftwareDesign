@@ -38,13 +38,12 @@ namespace ProjectBluejackCake_Group4
 
         protected void btnUpdateCake_Click(object sender, EventArgs e)
         {
-            String cakeOld = txtCakeNameOld.Text;
             String Cake_Name = txtCakeName.Text;
             int Cake_Price = Int32.Parse(txtCakePrice.Text);
             int Cake_Stock = Int32.Parse(txtCakeStock.Text);
             String Cake_Picture = uplCakePicture.ToString();
 
-            List<Cake> c = CakeRepositories.getAllCakeByName(cakeOld);
+            List<Cake> c = CakeRepositories.getAllCakeByName(Cake_Name);
 
             if (c == null)
             {

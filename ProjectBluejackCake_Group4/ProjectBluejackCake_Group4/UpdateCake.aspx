@@ -30,14 +30,6 @@
         <br />
 
         <table>
-
-            <tr>
-                <td>Old Cake Name:</td>
-                <td>
-                    <asp:TextBox ID="txtCakeNameOld" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="chkCakeNameOld" runat="server" ControlToValidate="txtCakeNameOld" ErrorMessage="Cake name must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
-                </td>
-            </tr>
             <tr>
                 <td>New Cake Name:</td>
                 <td>

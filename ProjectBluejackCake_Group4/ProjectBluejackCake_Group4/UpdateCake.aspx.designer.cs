@@ -22,24 +22,6 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.GridView viewUpdateCake;
         
         /// <summary>
-        /// txtCakeNameOld control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCakeNameOld;
-        
-        /// <summary>
-        /// chkCakeNameOld control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator chkCakeNameOld;
-        
-        /// <summary>
         /// txtCakeName control.
         /// </summary>
         /// <remarks>
