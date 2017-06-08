@@ -8,7 +8,7 @@ namespace ProjectBluejackCake_Group4.Handler
 {
     public class CakeHandler
     {
-        public static void create(Cake cake)
+        public static void insertNew(Cake cake)
         {
             CakeRepositories.insertCake(cake);
         }

@@ -22,7 +22,7 @@
                 <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
                 <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                 <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
-                <asp:BoundField DataField="Picture" HeaderText="Cake Picture" />
+                <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
             </Columns>
         </asp:GridView>
 
@@ -64,7 +64,6 @@
                 <td>New Cake Picture:</td>
                 <td>
                     <asp:FileUpload ID="uplCakePicture" runat="server" />
-                    <asp:RequiredFieldValidator ID="chkCakePicture" runat="server" ControlToValidate="uplCakePicture" ErrorMessage="Cake picture must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
                 </td>
             </tr>
 

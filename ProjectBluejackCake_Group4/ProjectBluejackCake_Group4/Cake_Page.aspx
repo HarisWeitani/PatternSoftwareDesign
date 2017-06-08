@@ -19,15 +19,28 @@
         Only registered customer can buy cake.<br />
         <br />
     </div>
+    <%-- for admin and cust --%>
     <div>
         <asp:GridView ID="ViewAllCake" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
             <Columns>
                 <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
                 <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                 <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
-                <asp:BoundField DataField="Picture" HeaderText="Cake Picture" />
+                <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
                 <asp:ButtonField ButtonType="Button" Text="Add To Cart" CommandName="Select" />
                 <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" />
+            </Columns>
+        </asp:GridView>
+        <br />
+    </div>
+    <%-- for Strangers --%>
+    <div>
+        <asp:GridView ID="ViewAllCakeStrangers" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
+            <Columns>
+                <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
+                <asp:BoundField DataField="Price" HeaderText="Cake Price" />
+                <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
+                <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
             </Columns>
         </asp:GridView>
         <br />

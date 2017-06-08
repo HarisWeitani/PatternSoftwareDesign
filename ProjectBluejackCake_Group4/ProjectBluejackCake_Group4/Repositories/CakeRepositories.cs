@@ -32,6 +32,7 @@ namespace ProjectBluejackCake_Group4.Repositories
         public static int insertCake(Cake c)
         {
             db.Cakes.Add(c);
+            db.Configuration.ValidateOnSaveEnabled = false;
             return db.SaveChanges();
         }
 
@@ -41,7 +42,6 @@ namespace ProjectBluejackCake_Group4.Repositories
             return db.SaveChanges();
         }
 
-        //dibenerin senfai
         public static int updateCake(Cake c, String CakeName, int Price, int Stock, String Picture)
         {
             c.CakeName = CakeName;
@@ -51,7 +51,7 @@ namespace ProjectBluejackCake_Group4.Repositories
 
             db.Cakes.Attach(c);
             db.Entry(c).State = System.Data.Entity.EntityState.Modified;
-
+            db.Configuration.ValidateOnSaveEnabled = false;
             return db.SaveChanges();
         }
     }

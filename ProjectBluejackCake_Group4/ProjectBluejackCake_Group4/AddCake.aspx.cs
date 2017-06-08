@@ -28,15 +28,77 @@ namespace ProjectBluejackCake_Group4
 
         protected void btnAddCake_Click(object sender, EventArgs e)
         {
-            String Cake_Name = txtCakeName.Text;
-            int Cake_Price = Int32.Parse(txtCakePrice.Text);
-            int Cake_Stock = Int32.Parse(txtCakeStock.Text);
-            String Cake_Picture = uplCakePicture.ToString();
+            string picExt;
+            string cakePic;
 
-            Cake c = CakeFactory.create(Cake_Name, Cake_Price, Cake_Stock, Cake_Picture);
-            CakeRepositories.insertCake(c);
+            Cake cake = Handler.CakeHandler.get(txtCakeName.Text);
 
-            erMessage.Text = "Successfully added new Cake!";
+            if (cake == null)
+            {
+
+                if (txtCakeName.Text == "") erMessage.Text = "Input Cake Name";
+                else if (txtCakePrice.Text == "") erMessage.Text = "Cake Price Must Not Empty";
+                else if (txtCakeStock.Text == "") erMessage.Text = "Cake Stock Must Not Empty & Greater Than 0";
+                else if (Int32.Parse(txtCakeStock.Text) <= 0) erMessage.Text = "Cake Stock Must Not Empty & Greater Than 0";
+                else
+                {
+                    if (this.uplCakePicture.HasFile)
+                    {
+                        picExt = uplCakePicture.FileName.Substring(uplCakePicture.FileName.Length - 4);
+                        if (picExt == ".jpg" || picExt == ".png")
+                        {
+                            this.uplCakePicture.SaveAs(Server.MapPath("~/") + txtCakeName.Text + picExt);
+                            cakePic = txtCakeName.Text + picExt;
+
+                            string cakeName = txtCakeName.Text;
+                            int cakePrice = Int32.Parse(txtCakePrice.Text);
+                            int cakeStock = Int32.Parse(txtCakeStock.Text);
+
+                            Cake c = CakeFactory.create(cakeName, cakePrice, cakeStock, cakePic);
+                            int row = Repositories.CakeRepositories.insertCake(c);
+
+                            if (row > 0)
+                            {
+                                erMessage.ForeColor = System.Drawing.Color.Blue;
+                                erMessage.Text = "Add Cake Success";
+                            }
+                            else
+                            {
+                                erMessage.Text = "Add Cake Failed";
+                            }
+                        }
+                        else
+                        {
+                            erMessage.Text = "Image Ekstension Must be .jpg or .png";
+                        }
+                    }
+                    else
+                    {
+                        string cakeName = txtCakeName.Text;
+                        int cakePrice = Int32.Parse(txtCakePrice.Text);
+                        int cakeStock = Int32.Parse(txtCakeStock.Text);
+                        cakePic = null;
+
+                        Cake c = CakeFactory.create(cakeName, cakePrice, cakeStock, cakePic);
+                        int row = Repositories.CakeRepositories.insertCake(c);
+
+                        if (row > 0)
+                        {
+                            erMessage.ForeColor = System.Drawing.Color.Blue;
+                            erMessage.Text = "Add Cake Success, No Picture Added";
+                        }
+                        else
+                        {
+                            erMessage.Text = "Add Cake Failed";
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                erMessage.Text = "Cake Name Already Exist";
+            }
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

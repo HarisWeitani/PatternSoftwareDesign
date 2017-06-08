@@ -15,19 +15,38 @@ namespace ProjectBluejackCake_Group4
         {
             ViewAllCake.DataSource = CakeRepositories.getAllCake();
             ViewAllCake.DataBind();
+        }
 
-            Member currUser = (Member)Session["userLogin"];
-
-            if (currUser.Type == "Admin")
-            {
-                btnAddCake.Visible = true;
-                btnUpdateCake.Visible = true;
-            }
+        void loadDataStranger()
+        {
+            ViewAllCakeStrangers.DataSource = CakeRepositories.getAllCake();
+            ViewAllCakeStrangers.DataBind();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadData();
+            Member currUser = (Member)Session["userLogin"];
+
+            if(currUser == null)
+            {
+                
+                btnAddCake.Visible = false;
+                btnUpdateCake.Visible = false;
+                loadDataStranger();
+            }
+            else if (currUser.Type == "Admin")
+            {
+                btnAddCake.Visible = true;
+                btnUpdateCake.Visible = true;
+                loadData();
+            }
+            else if (currUser.Type == "Customer")
+            {
+                btnAddCake.Visible = false;
+                btnUpdateCake.Visible = false;
+                loadData();
+            }
+
         }
 
         protected void btnAddCake_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace ProjectBluejackCake_Group4.Controller
         {
             Cake newCake = CakeFactory.create(cakeName, price, stock, picture);
 
-            CakeHandler.create(newCake);
+            CakeHandler.insertNew(newCake);
         }
 
         public static Cake get(String cakeName)

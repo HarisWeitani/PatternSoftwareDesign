@@ -47,7 +47,6 @@
                 <td>:</td>
                 <td>
                     <asp:FileUpload ID="uplCakePicture" runat="server" />
-                    <asp:RequiredFieldValidator ID="chkCakePicture" runat="server" ControlToValidate="uplCakePicture" ErrorMessage="Cake picture must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
                 </td>
             </tr>
 
