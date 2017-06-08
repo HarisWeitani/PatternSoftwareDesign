@@ -52,7 +52,7 @@ namespace ProjectBluejackCake_Group4
             }
             else
             {
-                int row = CakeRepositories.updateCake(c, Cake_Name, Cake_Price, Cake_Stock, Cake_Picture);
+                int row = CakeRepositories.updateCake(c.First(), Cake_Name, Cake_Price, Cake_Stock, Cake_Picture);
                 loadData();
             }
 

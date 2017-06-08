@@ -41,12 +41,18 @@ namespace ProjectBluejackCake_Group4.Repositories
             return db.SaveChanges();
         }
 
-        public static void updateCake(Cake c, String CakeName, int Price, int Stock, String Picture)
+        //dibenerin senfai
+        public static int updateCake(Cake c, String CakeName, int Price, int Stock, String Picture)
         {
             c.CakeName = CakeName;
             c.Price = Price;
             c.Stock = Stock;
             c.Picture = Picture;
+
+            db.Cakes.Attach(c);
+            db.Entry(c).State = System.Data.Entity.EntityState.Modified;
+
+            return db.SaveChanges();
         }
     }
 }
