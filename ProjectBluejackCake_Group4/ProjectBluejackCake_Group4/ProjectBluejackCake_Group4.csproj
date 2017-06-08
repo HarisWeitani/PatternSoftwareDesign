@@ -1376,7 +1376,7 @@
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controller\CakePromotion.cs" />
+    <Compile Include="Controller\CakeController.cs" />
     <Compile Include="Controller\MemberController.cs" />
     <Compile Include="Controller\PromotionController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
@@ -1502,6 +1502,7 @@
     </Compile>
     <Compile Include="UpdateCake.aspx.cs">
       <DependentUpon>UpdateCake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UpdateCake.aspx.designer.cs">
       <DependentUpon>UpdateCake.aspx</DependentUpon>

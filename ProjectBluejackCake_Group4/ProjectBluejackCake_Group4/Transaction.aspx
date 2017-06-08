@@ -23,7 +23,7 @@
     <div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
             <Columns>
-                <asp:BoundField HeaderText="Transaction Date" DataField="TransactionDate"></asp:BoundField>
+                <asp:BoundField HeaderText="Transaction Date" DataField="TransactionDate" DataFormatString="{0:MM/dd/yyyy}"></asp:BoundField>
                 <asp:BoundField HeaderText="Customer Name" DataField="CustomerName"></asp:BoundField>
                 <asp:BoundField HeaderText="Cake Name" DataField="CakeName"></asp:BoundField>
                 <asp:BoundField HeaderText="Cake Price" DataField="CakePrice"></asp:BoundField>

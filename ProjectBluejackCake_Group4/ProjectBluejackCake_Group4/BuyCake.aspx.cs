@@ -1,4 +1,5 @@
-﻿using ProjectBluejackCake_Group4.Handler;
+﻿using ProjectBluejackCake_Group4.Controller;
+using ProjectBluejackCake_Group4.Handler;
 using ProjectBluejackCake_Group4.Repositories;
 using System;
 using System.Collections.Generic;
@@ -26,13 +27,14 @@ namespace ProjectBluejackCake_Group4
                     bindPromo();
                     lblDiscount.Text = ddlPromotion.SelectedValue;
                     lblSubtotal.Text = (Int32.Parse(lblCakePrice.Text) - Int32.Parse(lblDiscount.Text)).ToString();
+                    btnAddToCart.Visible = true;
                 }
             }
         }
 
         void loadCake(String cakeName)
         {
-            Cake c = CakeRepositories.getCake(cakeName);
+            Cake c = CakeController.get(cakeName);
 
             lblCakeName.Text = c.CakeName;
             lblCakePrice.Text = c.Price.ToString();
@@ -70,7 +72,8 @@ namespace ProjectBluejackCake_Group4
                 var cart = (List<CartSession>)Session["cartSessionData"];
                 cart.Add(newCart);
 
-                erMessage.Text = "Success";
+                erMessage.Text = "Add To Cart Success!";
+                btnAddToCart.Visible = false;
             }
         }
 

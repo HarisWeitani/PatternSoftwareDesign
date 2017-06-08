@@ -22,5 +22,10 @@ namespace ProjectBluejackCake_Group4.Handler
         {
             return CakeRepositories.getAllCake();
         }
+
+        public static int minusCake(Cake c)
+        {
+            return CakeRepositories.minusCake(c);
+        }
     }
 } 

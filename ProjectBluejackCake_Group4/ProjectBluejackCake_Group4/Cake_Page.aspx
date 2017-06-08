@@ -27,8 +27,13 @@
                 <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                 <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
                 <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
-                <asp:ButtonField ButtonType="Button" Text="Add To Cart" CommandName="Select" />
                 <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button CommandArgument='<%# Eval("CakeName")%>' UseSubmitBehavior="false" 
+                            ID="btnAddToCart" runat="server" Text="Add To Cart" OnCommand="btnAddToCart_Command"/>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
         <br />

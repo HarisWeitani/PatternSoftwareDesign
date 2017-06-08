@@ -54,5 +54,11 @@ namespace ProjectBluejackCake_Group4.Repositories
             db.Configuration.ValidateOnSaveEnabled = false;
             return db.SaveChanges();
         }
+
+        public static int minusCake(Cake c)
+        {
+            c.Stock -= 1;
+            return db.SaveChanges();
+        }
     }
 }

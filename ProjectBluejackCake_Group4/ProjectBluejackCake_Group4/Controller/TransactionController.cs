@@ -9,9 +9,9 @@ namespace ProjectBluejackCake_Group4.Controller
 {
     public class TransactionController
     {
-        public static void create(String custemail, String custname, String cakename, int cakeprice, String chocplat, String protitle, int prodiscount, int subtotal)
+        public static void create(String custemail, DateTime date, String custname, String cakename, int cakeprice, String chocplat, String protitle, int prodiscount, int subtotal)
         {
-            TransactionHistory trans = TransactionFactory.create(custemail, custname, cakename, cakeprice, chocplat, protitle, prodiscount, subtotal);
+            TransactionHistory trans = TransactionFactory.create(custemail, date, custname, cakename, cakeprice, chocplat, protitle, prodiscount, subtotal);
             TransactionHandler.insert(trans);
         }
 

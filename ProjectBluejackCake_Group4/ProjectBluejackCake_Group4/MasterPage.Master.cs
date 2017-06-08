@@ -60,11 +60,11 @@ namespace ProjectBluejackCake_Group4
         {
             hlHome.Visible = state;
             hlPromotion.Visible = state;
-            hlAddPromotion.Visible = state;
-            hlUpdatePromotion.Visible = state;
+            hlAddPromotion.Visible = !state;
+            hlUpdatePromotion.Visible = !state;
             hlCake.Visible = state;
-            hlAddCake.Visible = state;
-            hlUpdateCake.Visible = state;
+            hlAddCake.Visible = !state;
+            hlUpdateCake.Visible = !state;
             hlProfile.Visible = state;
             hlChangePassword.Visible = state;
             hlViewCustomer.Visible = state;

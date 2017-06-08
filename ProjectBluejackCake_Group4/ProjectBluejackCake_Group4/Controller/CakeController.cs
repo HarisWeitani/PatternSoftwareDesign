@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ProjectBluejackCake_Group4.Controller
 {
-    public class CakePromotion
+    public class CakeController
     {
         public static void create(String cakeName, int price, int stock, String picture)
         {
@@ -26,6 +26,9 @@ namespace ProjectBluejackCake_Group4.Controller
             return CakeHandler.getAll();
         }
 
-
+        public static int minusCake(Cake c)
+        {
+            return CakeHandler.minusCake(c);
+        }
     }
 }

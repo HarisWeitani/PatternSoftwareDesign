@@ -72,7 +72,7 @@ namespace ProjectBluejackCake_Group4
             {
                 String Cake_Name = ViewAllCake.Rows[e.RowIndex].Cells[0].Text;
 
-                Cake c = CakePromotion.get(Cake_Name);
+                Cake c = CakeController.get(Cake_Name);
                 int row = CakeRepositories.deleteCake(c);
                 lblError.Text = "Deletion Success!";
                 if (row > 0)

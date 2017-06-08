@@ -24,14 +24,19 @@
                 <asp:BoundField DataField="proTitle" HeaderText="Promotion" />
                 <asp:BoundField DataField="proDiscount" HeaderText="Discount" />
                 <asp:BoundField DataField="subTotal" HeaderText="Sub Total" />
-                <asp:ButtonField ButtonType="Button" CommandName="Remove" Text="Remove" />
+                <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Remove" />
             </Columns>
         </asp:GridView>
     </div>
+    <br />
     <div>
         Grand Total: <asp:TextBox ID="txtGrandTotal" runat="server" Text="" ReadOnly="true"></asp:TextBox>
     </div>
+    <br /><br />
     <div>
         <asp:Button ID="btnCheckOut" runat="server" Text="Check Out" onclick="btnCheckOut_Click"/>
+    </div>
+    <div>
+        <asp:Label ID="erMessage" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>
