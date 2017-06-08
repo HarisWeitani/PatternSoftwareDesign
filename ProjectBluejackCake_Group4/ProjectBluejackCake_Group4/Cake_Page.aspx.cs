@@ -11,10 +11,10 @@ namespace ProjectBluejackCake_Group4
 {
     public partial class Cake_Page : System.Web.UI.Page
     {
-        void loadData()
+        void loadDataAdmin()
         {
-            ViewAllCake.DataSource = CakeRepositories.getAllCake();
-            ViewAllCake.DataBind();
+            ViewAllCakeAdmin.DataSource = CakeRepositories.getAllCake();
+            ViewAllCakeAdmin.DataBind();
         }
 
         void loadDataStranger()
@@ -22,14 +22,19 @@ namespace ProjectBluejackCake_Group4
             ViewAllCakeStrangers.DataSource = CakeRepositories.getAllCake();
             ViewAllCakeStrangers.DataBind();
         }
+        void loadDataCustomer()
+        {
+            ViewAllCakeCustomer.DataSource = CakeRepositories.getAllCake();
+            ViewAllCakeCustomer.DataBind();
+        }
 
-        protected void Page_Load(object sender, EventArgs e)
+        void loadData()
         {
             Member currUser = (Member)Session["userLogin"];
 
-            if(currUser == null)
+            if (currUser == null)
             {
-                
+
                 btnAddCake.Visible = false;
                 btnUpdateCake.Visible = false;
                 loadDataStranger();
@@ -38,15 +43,22 @@ namespace ProjectBluejackCake_Group4
             {
                 btnAddCake.Visible = true;
                 btnUpdateCake.Visible = true;
-                loadData();
+                btnViewCart.Visible = false;
+                loadDataAdmin();
             }
             else if (currUser.Type == "Customer")
             {
                 btnAddCake.Visible = false;
                 btnUpdateCake.Visible = false;
-                loadData();
+                btnViewCart.Visible = true;
+                loadDataCustomer();
             }
 
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
 
         protected void btnAddCake_Click(object sender, EventArgs e)
@@ -70,7 +82,7 @@ namespace ProjectBluejackCake_Group4
 
             else
             {
-                String Cake_Name = ViewAllCake.Rows[e.RowIndex].Cells[0].Text;
+                String Cake_Name = ViewAllCakeAdmin.Rows[e.RowIndex].Cells[0].Text;
 
                 Cake c = CakeController.get(Cake_Name);
                 int row = CakeRepositories.deleteCake(c);
@@ -84,7 +96,7 @@ namespace ProjectBluejackCake_Group4
 
         protected void Select(object sender, GridViewDeleteEventArgs e)
         {
-            String Cake_Name = ViewAllCake.Rows[e.RowIndex].Cells[0].Text;
+            String Cake_Name = ViewAllCakeAdmin.Rows[e.RowIndex].Cells[0].Text;
             Cake c = CakeRepositories.getCake(Cake_Name);
 
             Response.Redirect("BuyCake.aspx?cName=" + Cake_Name);

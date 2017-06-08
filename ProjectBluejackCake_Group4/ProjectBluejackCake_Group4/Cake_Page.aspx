@@ -19,21 +19,15 @@
         Only registered customer can buy cake.<br />
         <br />
     </div>
-    <%-- for admin and cust --%>
+    <%-- for admin --%>
     <div>
-        <asp:GridView ID="ViewAllCake" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
+        <asp:GridView ID="ViewAllCakeAdmin" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
             <Columns>
                 <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
                 <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                 <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
                 <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
                 <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" />
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:Button CommandArgument='<%# Eval("CakeName")%>' UseSubmitBehavior="false" 
-                            ID="btnAddToCart" runat="server" Text="Add To Cart" OnCommand="btnAddToCart_Command"/>
-                    </ItemTemplate>
-                </asp:TemplateField>
             </Columns>
         </asp:GridView>
         <br />
@@ -46,6 +40,24 @@
                 <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                 <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
                 <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
+            </Columns>
+        </asp:GridView>
+        <br />
+    </div>
+    <%-- for Customer --%>
+    <div>
+        <asp:GridView ID="ViewAllCakeCustomer" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
+            <Columns>
+                <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
+                <asp:BoundField DataField="Price" HeaderText="Cake Price" />
+                <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
+                <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button CommandArgument='<%# Eval("CakeName")%>' UseSubmitBehavior="false"
+                            ID="btnAddToCart" runat="server" Text="Add To Cart" OnCommand="btnAddToCart_Command" />
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
         </asp:GridView>
         <br />
