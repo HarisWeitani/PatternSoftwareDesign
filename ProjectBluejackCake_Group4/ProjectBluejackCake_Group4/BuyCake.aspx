@@ -12,13 +12,13 @@
             <tr>
                 <td>Cake Name:</td>
                 <td>
-                    <asp:TextBox ID="txtCakeName" runat="server" ReadOnly="true"></asp:TextBox>
+                    <asp:Label ID="lblCakeName" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>Cake Price:</td>
                 <td>
-                    <asp:TextBox ID="txtCakePrice" runat="server" ReadOnly="true"></asp:TextBox>
+                    <asp:Label ID="lblCakePrice" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -30,15 +30,15 @@
             <tr>
                 <td>Promotion Title:</td>
                 <td>
-                    <asp:DropDownList ID="ddlPromotion" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlPromotion" runat="server" OnSelectedIndexChanged="ddlPromotion_SelectedIndexChanged"></asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>Promotion Discount:</td>
                 <td>
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
                         <ContentTemplate>
-                            <asp:TextBox ID="txtDiscount" runat="server" ReadOnly="true"></asp:TextBox>
+                            <asp:Label ID="lblDiscount" runat="server" Text=""></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </td>
@@ -48,7 +48,7 @@
                 <td>
                     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                         <ContentTemplate>
-                            <asp:TextBox ID="txtSubtotal" runat="server" ReadOnly="true"></asp:TextBox>
+                            <asp:Label ID="lblSubtotal" runat="server" Text=""></asp:Label>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </td>
@@ -65,7 +65,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Button ID="btnBack" runat="server" Text="Cancel Add To Cart, back to Cake Page" OnClick="btnBack_Click"/>
+                    <asp:Button ID="btnBack" runat="server" Text="Back to Cake Page" OnClick="btnBack_Click"/>
                 </td>
             </tr>
         </table>

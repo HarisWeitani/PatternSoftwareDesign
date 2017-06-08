@@ -20,10 +20,13 @@ namespace ProjectBluejackCake_Group4
                 Response.Redirect("Home.aspx");
             else
             {
-                loadCake(cakeName);
-                bindPromo();
-                txtDiscount.Text = ddlPromotion.SelectedValue;
-                txtSubtotal.Text = (Int32.Parse(txtCakePrice.Text) - Int32.Parse(txtDiscount.Text)).ToString();
+                if(!Page.IsPostBack)
+                {
+                    loadCake(cakeName);
+                    bindPromo();
+                    lblDiscount.Text = ddlPromotion.SelectedValue;
+                    lblSubtotal.Text = (Int32.Parse(lblCakePrice.Text) - Int32.Parse(lblDiscount.Text)).ToString();
+                }
             }
         }
 
@@ -31,8 +34,8 @@ namespace ProjectBluejackCake_Group4
         {
             Cake c = CakeRepositories.getCake(cakeName);
 
-            txtCakeName.Text = c.CakeName;
-            txtCakePrice.Text = c.Price.ToString();
+            lblCakeName.Text = c.CakeName;
+            lblCakePrice.Text = c.Price.ToString();
         }
 
         void bindPromo()
@@ -45,12 +48,12 @@ namespace ProjectBluejackCake_Group4
 
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
-            String cakeName = txtCakeName.Text;
-            int cakePrice = Int32.Parse(txtCakePrice.Text);
+            String cakeName = lblCakeName.Text;
+            int cakePrice = Int32.Parse(lblCakePrice.Text);
             String chocPlat = txtChocPlat.Text;
-            String proTitle = ddlPromotion.Text;
-            int proDiscount = Int32.Parse(txtDiscount.Text);
-            int subTotal = Int32.Parse(txtSubtotal.Text);
+            String proTitle = ddlPromotion.SelectedItem.Text;
+            int proDiscount = Int32.Parse(ddlPromotion.SelectedValue);
+            int subTotal = Int32.Parse(lblSubtotal.Text);
 
             if(chocPlat.Length > 10)
             {
@@ -74,6 +77,12 @@ namespace ProjectBluejackCake_Group4
         protected void btnBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("Cake_Page.aspx");
+        }
+
+        protected void ddlPromotion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblDiscount.Text = ddlPromotion.SelectedValue;
+            lblSubtotal.Text = (Int32.Parse(lblCakePrice.Text) - Int32.Parse(lblDiscount.Text)).ToString();
         }
     }
 }

@@ -18,18 +18,18 @@
     <div>
         <asp:GridView ID="viewAllCart" runat="server" AutoGenerateColumns="false" OnRowDeleting="viewAllCart_RowDeleting">
             <Columns>
-                <asp:BoundField DataField="cName" HeaderText="Cake Name" />
-                <asp:BoundField DataField="cPrice" HeaderText="Cake Price" />
-                <asp:BoundField DataField="chocPlate" HeaderText="Chocolate Plate Greeting" />
-                <asp:BoundField DataField="pTitle" HeaderText="Promotion" />
-                <asp:BoundField DataField="pDiscount" HeaderText="Discount" />
+                <asp:BoundField DataField="cakeName" HeaderText="Cake Name" />
+                <asp:BoundField DataField="cakePrice" HeaderText="Cake Price" />
+                <asp:BoundField DataField="chocPlat" HeaderText="Chocolate Plate Greeting" />
+                <asp:BoundField DataField="proTitle" HeaderText="Promotion" />
+                <asp:BoundField DataField="proDiscount" HeaderText="Discount" />
                 <asp:BoundField DataField="subTotal" HeaderText="Sub Total" />
                 <asp:ButtonField ButtonType="Button" CommandName="Remove" Text="Remove" />
             </Columns>
         </asp:GridView>
     </div>
     <div>
-        <asp:TextBox ID="txtGrandTotal" runat="server" Text=""></asp:TextBox>
+        Grand Total: <asp:TextBox ID="txtGrandTotal" runat="server" Text="" ReadOnly="true"></asp:TextBox>
     </div>
     <div>
         <asp:Button ID="btnCheckOut" runat="server" Text="Check Out" onclick="btnCheckOut_Click"/>

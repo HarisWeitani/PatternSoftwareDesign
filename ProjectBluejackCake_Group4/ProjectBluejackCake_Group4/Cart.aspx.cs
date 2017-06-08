@@ -11,19 +11,22 @@ namespace ProjectBluejackCake_Group4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            loadData();
         }
 
         void loadData()
         {
             int grandTotal = 0;
 
-            var cart = (List<CartSession>)Session["cartSessionData"];
-            
-            foreach(CartSession c in cart)
+            List<CartSession> cart = (List<CartSession>)Session["cartSessionData"];
+
+            foreach (CartSession c in cart)
             {
                 grandTotal += c.subTotal;
             }
+
+            viewAllCart.DataSource = cart.ToList();
+            viewAllCart.DataBind();
 
             txtGrandTotal.Text = grandTotal.ToString();
         }

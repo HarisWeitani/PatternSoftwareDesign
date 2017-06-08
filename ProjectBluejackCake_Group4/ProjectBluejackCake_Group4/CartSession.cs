@@ -7,12 +7,12 @@ namespace ProjectBluejackCake_Group4
 {
     public class CartSession
     {
-        public String cakeName;
-        public int cakePrice;
-        public String chocPlat;
-        public String proTitle;
-        public int proDiscount;
-        public int subTotal;
+        public String cakeName { get; set; }
+        public int cakePrice { get; set; }
+        public String chocPlat { get; set; }
+        public String proTitle { get; set; }
+        public int proDiscount { get; set; }
+        public int subTotal { get; set; }
 
         public CartSession(String cName, int cPrice, String chocPlate, String pTitle, int pDiscount)
         {

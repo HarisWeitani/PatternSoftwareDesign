@@ -13,22 +13,22 @@ namespace ProjectBluejackCake_Group4 {
     public partial class BuyCake {
         
         /// <summary>
-        /// txtCakeName control.
+        /// lblCakeName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCakeName;
+        protected global::System.Web.UI.WebControls.Label lblCakeName;
         
         /// <summary>
-        /// txtCakePrice control.
+        /// lblCakePrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCakePrice;
+        protected global::System.Web.UI.WebControls.Label lblCakePrice;
         
         /// <summary>
         /// txtChocPlat control.
@@ -58,13 +58,13 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// txtDiscount control.
+        /// lblDiscount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiscount;
+        protected global::System.Web.UI.WebControls.Label lblDiscount;
         
         /// <summary>
         /// UpdatePanel2 control.
@@ -76,13 +76,13 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
         
         /// <summary>
-        /// txtSubtotal control.
+        /// lblSubtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubtotal;
+        protected global::System.Web.UI.WebControls.Label lblSubtotal;
         
         /// <summary>
         /// btnAddToCart control.
