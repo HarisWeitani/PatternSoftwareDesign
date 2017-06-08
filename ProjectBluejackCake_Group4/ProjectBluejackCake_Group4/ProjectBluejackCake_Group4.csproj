@@ -1376,6 +1376,7 @@
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controller\CakePromotion.cs" />
     <Compile Include="Controller\MemberController.cs" />
     <Compile Include="Controller\PromotionController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
@@ -1417,6 +1418,7 @@
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\CakeHandler.cs" />
     <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\MemberHandler.cs" />
     <Compile Include="Handler\PromotionHandler.cs" />

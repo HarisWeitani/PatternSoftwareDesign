@@ -1,4 +1,5 @@
-﻿using ProjectBluejackCake_Group4.Repositories;
+﻿using ProjectBluejackCake_Group4.Controller;
+using ProjectBluejackCake_Group4.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,29 @@ namespace ProjectBluejackCake_Group4
         {
             ViewAllCake.DataSource = CakeRepositories.getAllCake();
             ViewAllCake.DataBind();
+
+            Member currUser = (Member)Session["userLogin"];
+
+            if (currUser.Type == "Admin")
+            {
+                btnAddCake.Visible = true;
+                btnUpdateCake.Visible = true;
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            loadData();
+            Member currUser = (Member)Session["userLogin"];
+
+            if (Session["userLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            else
+            {
+                loadData();
+            }
         }
 
         protected void btnAddCake_Click(object sender, EventArgs e)
@@ -34,7 +53,8 @@ namespace ProjectBluejackCake_Group4
         protected void ViewAllCake_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             String Cake_Name = ViewAllCake.Rows[e.RowIndex].Cells[0].Text;
-            Cake c = CakeRepositories.getCake(Cake_Name);
+
+            Cake c = CakePromotion.get(Cake_Name);
             int row = CakeRepositories.deleteCake(c);
             lblError.Text = "Deletion Success!";
             if (row > 0)
