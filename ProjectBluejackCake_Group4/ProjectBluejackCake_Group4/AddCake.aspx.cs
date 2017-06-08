@@ -13,7 +13,17 @@ namespace ProjectBluejackCake_Group4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Member currUser = (Member)Session["userLogin"];
 
+            if (Session["userLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+            else if (currUser.Type == "Customer")
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void btnAddCake_Click(object sender, EventArgs e)

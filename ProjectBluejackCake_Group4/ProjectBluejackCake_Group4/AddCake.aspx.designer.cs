@@ -94,15 +94,6 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator chkCakePicture;
         
         /// <summary>
-        /// btnAddCake control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddCake;
-        
-        /// <summary>
         /// erMessage control.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace ProjectBluejackCake_Group4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label erMessage;
+        
+        /// <summary>
+        /// btnAddCake control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddCake;
         
         /// <summary>
         /// btnBack control.

@@ -1,50 +1,66 @@
-﻿//using ProjectBluejackCake_Group4.Repositories;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.Web.UI;
-//using System.Web.UI.WebControls;
+﻿using ProjectBluejackCake_Group4.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
-//namespace ProjectBluejackCake_Group4
-//{
-//    public partial class UpdateCake : System.Web.UI.Page
-//    {
-//        void loadData()
-//        {
-//            viewUpdateCake.DataSource = CakeRepositories.getAllCake();
-//            viewUpdateCake.DataBind();
-//        }
+namespace ProjectBluejackCake_Group4
+{
+    public partial class UpdateCake : System.Web.UI.Page
+    {
+        void loadData()
+        {
+            viewUpdateCake.DataSource = CakeRepositories.getAllCake();
+            viewUpdateCake.DataBind();
+        }
 
-//        protected void Page_Load(object sender, EventArgs e)
-//        {
-//            loadData();
-//        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Member currUser = (Member)Session["userLogin"];
 
-//        protected void btnUpdateCake_Click(object sender, EventArgs e)
-//        {
-//            String Cake_Name = txtCakeName.Text;
-//            int Cake_Price = Int32.Parse(txtCakePrice.Text);
-//            int Cake_Stock = Int32.Parse(txtCakeStock.Text);
-//            String Cake_Picture = uplCakePicture.ToString();
+            if (Session["userLogin"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
 
-//            List<Cake> c = CakeRepositories.getAllCakeByName(Cake_Name);
+            else if (currUser.Type == "Customer")
+            {
+                Response.Redirect("Login.aspx");
+            }
 
-//            if (c == null)
-//            {
-//                erMessage.Text = "Cake doestn't exist";
-//            }
-//            else
-//            {
-//                int row = CakeRepositories.updateCake(c, Cake_Name, Cake_Price, Cake_Stock, Cake_Picture);
-//                loadData();
-//            }
+            else
+            {
+                loadData();
+            }
+        }
 
-//        }
+        protected void btnUpdateCake_Click(object sender, EventArgs e)
+        {
+            String cakeOld = txtCakeNameOld.Text;
+            String Cake_Name = txtCakeName.Text;
+            int Cake_Price = Int32.Parse(txtCakePrice.Text);
+            int Cake_Stock = Int32.Parse(txtCakeStock.Text);
+            String Cake_Picture = uplCakePicture.ToString();
 
-//        protected void btnBack_Click(object sender, EventArgs e)
-//        {
-//            Response.Redirect("Cake.aspx");
-//        }
-//    }
-//}
+            List<Cake> c = CakeRepositories.getAllCakeByName(cakeOld);
+
+            if (c == null)
+            {
+                erMessage.Text = "Cake doestn't exist";
+            }
+            else
+            {
+                int row = CakeRepositories.updateCake(c, Cake_Name, Cake_Price, Cake_Stock, Cake_Picture);
+                loadData();
+            }
+
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cake_Page.aspx");
+        }
+    }
+}

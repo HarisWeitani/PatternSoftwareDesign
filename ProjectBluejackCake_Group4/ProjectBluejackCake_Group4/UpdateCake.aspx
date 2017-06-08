@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="UpdateCake.aspx.cs" Inherits="ProjectBluejackCake_Group4.UpdateCake" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,12 +8,13 @@
         - Admin bisa update cake.
         - Error message jika validasi salah.
         - benerin supaya gk perlu upload2 picture terus (optional).
-         --%>
+    --%>
     <h3>Update Cake</h3>
     <div>
         Welcome to the Update Cake page.<br />
         You can update the old cake by filling the form here:<br />
-        NOTE: YOU NEED TO UPLOAD CAKE PICTURE AGAIN<br /><br />
+        NOTE: YOU NEED TO UPLOAD CAKE PICTURE AGAIN<br />
+        <br />
     </div>
     <div>
         <asp:GridView ID="viewUpdateCake" runat="server" AutoGenerateColumns="false">
@@ -28,6 +30,14 @@
         <br />
 
         <table>
+
+            <tr>
+                <td>Old Cake Name:</td>
+                <td>
+                    <asp:TextBox ID="txtCakeNameOld" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="chkCakeNameOld" runat="server" ControlToValidate="txtCakeNameOld" ErrorMessage="Cake name must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
             <tr>
                 <td>New Cake Name:</td>
                 <td>
@@ -57,14 +67,19 @@
                     <asp:RequiredFieldValidator ID="chkCakePicture" runat="server" ControlToValidate="uplCakePicture" ErrorMessage="Cake picture must be filled!" ForeColor="Red" Font-Italic="true"></asp:RequiredFieldValidator>
                 </td>
             </tr>
+
             <tr>
-                <td colspan="2"><asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake" OnClick="btnUpdateCake_Click"/></td>
+                <td colspan="2">
+                    <asp:Label ID="erMessage" runat="server" Text="" ForeColor="Red" Font-Bold="true" Font-Italic="true"></asp:Label></td>
             </tr>
             <tr>
-                <td colspan="2"><asp:Label ID="erMessage" runat="server" Text=""></asp:Label></td>
+                <td colspan="2">
+                    <asp:Button ID="btnUpdateCake" runat="server" Text="Update Cake" OnClick="btnUpdateCake_Click" /></td>
             </tr>
+
             <tr>
-                <td colspan="2"><asp:Button ID="btnBack" runat="server" Text="Back to Cake page" onClick="btnBack_Click"/></td>
+                <td colspan="2">
+                    <asp:Button ID="btnBack" runat="server" Text="Back to Cake page" OnClick="btnBack_Click" CausesValidation="false" /></td>
             </tr>
         </table>
     </div>

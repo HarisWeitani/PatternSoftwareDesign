@@ -22,6 +22,24 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.GridView viewUpdateCake;
         
         /// <summary>
+        /// txtCakeNameOld control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCakeNameOld;
+        
+        /// <summary>
+        /// chkCakeNameOld control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator chkCakeNameOld;
+        
+        /// <summary>
         /// txtCakeName control.
         /// </summary>
         /// <remarks>
@@ -103,15 +121,6 @@ namespace ProjectBluejackCake_Group4 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator chkCakePicture;
         
         /// <summary>
-        /// btnUpdateCake control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdateCake;
-        
-        /// <summary>
         /// erMessage control.
         /// </summary>
         /// <remarks>
@@ -119,6 +128,15 @@ namespace ProjectBluejackCake_Group4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label erMessage;
+        
+        /// <summary>
+        /// btnUpdateCake control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateCake;
         
         /// <summary>
         /// btnBack control.

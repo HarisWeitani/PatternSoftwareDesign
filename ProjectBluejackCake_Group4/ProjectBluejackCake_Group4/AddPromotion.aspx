@@ -49,7 +49,7 @@
         <br />
         <asp:Button ID="btnAddPromotion" runat="server" Text="Add Promotion" OnClick="btnAddPromotion_Click" />
         &nbsp;&nbsp;
-        <asp:Button ID="btnBack" runat="server" Text="Back to Promotion page" OnClick="btnBack_Click" />
+        <asp:Button ID="btnBack" runat="server" Text="Back to Promotion page" OnClick="btnBack_Click" CausesValidation="false" />
 
 
     </div>

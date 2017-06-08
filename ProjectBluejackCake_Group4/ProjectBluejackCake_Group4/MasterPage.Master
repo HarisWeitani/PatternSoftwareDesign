@@ -54,7 +54,7 @@
             <asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/Login.aspx">Login |</asp:HyperLink>
             <asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Register.aspx">Register |</asp:HyperLink>
             <asp:HyperLink ID="hlForgotPassword" runat="server" NavigateUrl="~/ForgotPassword.aspx">Forgot Password |</asp:HyperLink>
-            <asp:HyperLink ID="hlPromotion" runat="server" NavigateUrl="~/Promotion.aspx">Promotion |</asp:HyperLink>
+            <asp:HyperLink ID="hlPromotion" runat="server" NavigateUrl="~/PromotionPage.aspx">Promotion |</asp:HyperLink>
             <asp:HyperLink ID="hlAddPromotion" runat="server" NavigateUrl="~/AddPromotion.aspx">Add Promotion |</asp:HyperLink>
             <asp:HyperLink ID="hlUpdatePromotion" runat="server" NavigateUrl="~/UpdatePromotion.aspx">Update Promotion |</asp:HyperLink>
             <asp:HyperLink ID="hlCake" runat="server" NavigateUrl="~/Cake_Page.aspx">Cake |</asp:HyperLink>
