@@ -3,12 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- LOGIN PAGE NOTE:
-        - Accessible by guest only.
-        - Error Message jika kombinasi email password salah.
-        - Kalo sukses login, redirect ke Home.
-        - Remember me untuk simpen cookie email selama 1 jam.
-    --%>
     <h3>Login Page
     </h3>
     <div>
@@ -22,7 +16,7 @@
                 <td>Email:</td>
                 <td>
                     <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-                    
+
                 </td>
             </tr>
             <tr>

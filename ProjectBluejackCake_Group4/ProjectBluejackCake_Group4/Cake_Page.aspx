@@ -3,14 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- CAKE PAGE NOTE:
-        - Accessible by all users.
-        - Cake Name, Cake Picture, Stock, Price.
-        - User bisa buy cake (input chocolate plate greeting, promotion, sama add to cart button).
-        - Error Message jika user gk input chocolate plate greeting atau lebih dari 10 char, gk input promotion.
-        - Kalo klik Add to Cart maka data masuk ke Cart.
-        - Admin bisa Add Cake, Update Cake, Delete Cake.
-    --%>
+
     <h3>Cake Page
     </h3>
     <div>
@@ -21,13 +14,14 @@
     </div>
     <%-- for admin --%>
     <div>
-        <asp:GridView ID="ViewAllCakeAdmin" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting">
+        <asp:GridView ID="ViewAllCakeAdmin" runat="server" AutoGenerateColumns="false" OnRowDeleting="ViewAllCake_RowDeleting" OnRowUpdating="ViewAllCakeAdmin_RowUpdating">
             <Columns>
                 <asp:BoundField DataField="CakeName" HeaderText="Cake Name" />
                 <asp:BoundField DataField="Price" HeaderText="Cake Price" />
                 <asp:BoundField DataField="Stock" HeaderText="Cake Stock" />
                 <asp:ImageField DataImageUrlField="Picture" HeaderText="Pic" ControlStyle-Width="100" ControlStyle-Height="100"></asp:ImageField>
                 <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" />
+                <asp:ButtonField ButtonType="Button" CommandName="Update" Text="Update" />
             </Columns>
         </asp:GridView>
         <br />

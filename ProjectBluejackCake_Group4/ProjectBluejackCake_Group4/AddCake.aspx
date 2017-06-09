@@ -3,11 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%-- ADD CAKE PAGE NOTE:
-        - Accessible by admin only.
-        - Admin bisa insert new cake.
-        - Error message jika validasi salah.
-    --%>
+
     <h3>Add Cake</h3>
     <div>
         Welcome to the Add Cake page.<br />

@@ -13,11 +13,11 @@ namespace ProjectBluejackCake_Group4
         {
             if (!Page.IsPostBack)
             {
-                if(Session["userLogin"] != null)
+                if (Session["userLogin"] != null)
                 {
                     Response.Redirect("Home.aspx");
                 }
-                if(Request.Cookies["userCookies"] != null)
+                if (Request.Cookies["userCookies"] != null)
                 {
                     txtEmail.Text = Request.Cookies["userCookies"].Value;
                 }
@@ -32,7 +32,15 @@ namespace ProjectBluejackCake_Group4
             erMessage.Text = "";
             erMessage.ForeColor = System.Drawing.Color.Red;
 
-            if(member == null)
+            if (txtEmail.Text == "")
+            {
+                erMessage.Text = "Email must not empty";
+            }
+            else if (txtPassword.Text == "")
+            {
+                erMessage.Text = "Password must not empty";
+            }
+            else if (member == null)
             {
                 erMessage.Text = "User Not Found";
             }

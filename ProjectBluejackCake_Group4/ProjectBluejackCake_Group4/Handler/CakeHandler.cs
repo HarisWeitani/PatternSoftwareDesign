@@ -23,6 +23,11 @@ namespace ProjectBluejackCake_Group4.Handler
             return CakeRepositories.getAllCake();
         }
 
+        public static List<Cake> getAllCake(String cakeName)
+        {
+            return CakeRepositories.getAllCakeByName(cakeName);
+        }
+
         public static int minusCake(Cake c)
         {
             return CakeRepositories.minusCake(c);

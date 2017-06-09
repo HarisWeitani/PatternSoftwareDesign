@@ -10,6 +10,8 @@ namespace ProjectBluejackCake_Group4
 {
     public partial class UpdateCake : System.Web.UI.Page
     {
+        Cake editCake;
+
         void loadData()
         {
             viewUpdateCake.DataSource = CakeRepositories.getAllCake();
@@ -33,27 +35,84 @@ namespace ProjectBluejackCake_Group4
             else
             {
                 loadData();
+
+                string cakeName = Request.QueryString["cakeName"];
+
+                if (cakeName != null)
+                {
+                    editCake = Handler.CakeHandler.get(cakeName);
+
+                    if (editCake != null) //check if cake exists
+                    {
+                        if (!Page.IsPostBack)
+                        {
+                            txtCakeName.Text = editCake.CakeName;
+                            txtCakePrice.Text = Convert.ToString(editCake.Price);
+                            txtCakeStock.Text = Convert.ToString(editCake.Stock);
+                        }
+                    }
+                }
             }
         }
 
         protected void btnUpdateCake_Click(object sender, EventArgs e)
         {
-            String Cake_Name = txtCakeName.Text;
-            int Cake_Price = Int32.Parse(txtCakePrice.Text);
-            int Cake_Stock = Int32.Parse(txtCakeStock.Text);
-            String Cake_Picture = uplCakePicture.ToString();
+            String picExt;
+            String cakePic;
 
-            List<Cake> c = CakeRepositories.getAllCakeByName(Cake_Name);
+            Cake cake = Handler.CakeHandler.get(txtCakeName.Text);
 
-            if (c == null)
-            {
-                erMessage.Text = "Cake doestn't exist";
-            }
+            if (editCake == null) erMessage.Text = "Cake Does Not Exist";
             else
             {
-                int row = CakeRepositories.updateCake(c.First(), Cake_Name, Cake_Price, Cake_Stock, Cake_Picture);
-                loadData();
+                if (txtCakeName.Text == "") erMessage.Text = "Input Cake Name";
+                else if (txtCakeName.Text != editCake.CakeName && cake != null) erMessage.Text = "Cake Name Already Exist";
+                else if (txtCakePrice.Text == "") erMessage.Text = "Cake Price Must Not Empty";
+                else if (txtCakeStock.Text == "") erMessage.Text = "Cake Stock Must Not Empty & Greater Than 0";
+                else if (Int32.Parse(txtCakeStock.Text) <= 0) erMessage.Text = "Cake Stock Must Not Empty & Greater Than 0";
+                else
+                {
+                    if (this.uplCakePicture.HasFile)
+                    {
+                        //picExt = uploadPicture.FileName.Substring(uploadPicture.FileName.Length - 4);
+
+                        picExt = System.IO.Path.GetExtension(uplCakePicture.FileName).ToLower();
+
+                        if (picExt == ".jpg" || picExt == ".png")
+                        {
+                            this.uplCakePicture.SaveAs(Server.MapPath("~/") + txtCakeName.Text + picExt);
+                            cakePic = txtCakeName.Text + picExt;
+
+                            string cakeName = txtCakeName.Text;
+                            int cakePrice = Int32.Parse(txtCakePrice.Text);
+                            int cakeStock = Int32.Parse(txtCakeStock.Text);
+
+                            List<Cake> c = Handler.CakeHandler.getAllCake(editCake.CakeName);
+                            int row = CakeRepositories.updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
+
+                        }
+                        else
+                        {
+                            erMessage.Text = "Image Ekstension Must be .jpg or .png";
+                        }
+                    }
+                    else
+                    {
+                        string cakeName = txtCakeName.Text;
+                        int cakePrice = Int32.Parse(txtCakePrice.Text);
+                        int cakeStock = Int32.Parse(txtCakeStock.Text);
+                        cakePic = null;
+
+                        List<Cake> c = Handler.CakeHandler.getAllCake(editCake.CakeName);
+                        int row = CakeRepositories.updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
+                    }
+
+                    Response.Redirect("Cake_Page.aspx");
+                }
             }
+
+
+
 
         }
 

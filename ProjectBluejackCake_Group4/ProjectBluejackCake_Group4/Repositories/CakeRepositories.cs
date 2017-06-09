@@ -55,6 +55,16 @@ namespace ProjectBluejackCake_Group4.Repositories
             return db.SaveChanges();
         }
 
+        public static int updateCake(List<Cake> cake, string cakeName, int cakePrice, int cakeStock, string cakePic)
+        {
+            foreach (Cake c in cake)
+            {
+                updateCake(c, cakeName, cakePrice, cakeStock, cakePic);
+            }
+            db.Configuration.ValidateOnSaveEnabled = false;
+            return db.SaveChanges();
+        }
+
         public static int minusCake(Cake c)
         {
             c.Stock -= 1;

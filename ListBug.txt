@@ -1,16 +1,16 @@
-1.login tidak menunjukan validasi kosong
-2 Register validasi kosong ga muncul, hanya DOB yg muncul
-3.Forgot password tidak ada validasi kosong
+
+3.Forgot password tidak ada validasi kosong ( ga diminta di doc )
+
 4.HOW TO MODIFY PRIMARY KEY!? buat Update Promo & Cake
 5.Update Promo tidak menunjukan error title ga ada
-6.Add Cake "No Picture Added"?, gw udh input .jpg
-7.Update Cake input cake yg g ad crash, validasi ga muncul
+
+6.Add Cake "No Picture Added"?, gw udh input .jpg ( uda bener kok )
+
+7.Update Cake input cake yg g ad crash, validasi ga muncul ( gw buatin ulang beda jenis update )
+
 9.Cart Grand Total bisa di modif?
 10.Generate Transaction Report redirect Crash
    (<CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />)
    Mungkin gw g install CrystalReport
 11.ViewCustomer msh ksh liat data admin, padahal di atasnya
    tulis kaga di include
-12.Copyrights msh blablabla? Intended?
-
-

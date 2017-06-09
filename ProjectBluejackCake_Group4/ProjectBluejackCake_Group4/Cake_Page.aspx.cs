@@ -113,5 +113,13 @@ namespace ProjectBluejackCake_Group4
 
             Response.Redirect("BuyCake.aspx?cName=" + Cake_Name);
         }
+
+        protected void ViewAllCakeAdmin_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            String cakeName = ViewAllCakeAdmin.Rows[e.RowIndex].Cells[0].Text;
+
+            Response.Redirect(String.Format("UpdateCake.aspx?cakeName={0}", cakeName));
+
+        }
     }
 }
