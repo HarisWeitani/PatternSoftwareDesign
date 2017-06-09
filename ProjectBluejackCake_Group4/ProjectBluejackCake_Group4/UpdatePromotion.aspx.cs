@@ -10,6 +10,7 @@ namespace ProjectBluejackCake_Group4
 {
     public partial class UpdatePromotion : System.Web.UI.Page
     {
+        Promotion editPromo;
 
         void loadData()
         {
@@ -34,6 +35,20 @@ namespace ProjectBluejackCake_Group4
             else
             {
                 loadData();
+
+                String promoTitle = Request.QueryString["promoTitle"];
+
+                if (promoTitle != null)
+                {
+                    editPromo = PromotionRepositories.getPromo(promoTitle);
+
+                    if (!Page.IsPostBack)
+                    {
+                        txtTitle.Text = editPromo.Title;
+                        txtDiscount.Text = editPromo.Discount.ToString();
+                        txtDescription.Text = editPromo.Description;
+                    }
+                }
             }
 
         }
@@ -44,9 +59,9 @@ namespace ProjectBluejackCake_Group4
             String descrption = txtDescription.Text;
             int discount = Int32.Parse(txtDiscount.Text);
 
-            List<Promotion> x = PromotionRepositories.getAllPromoByTitle(title);
+            List<Promotion> x = PromotionRepositories.getAllPromoByTitle(editPromo.Title);
 
-            if (x == null)
+            if (editPromo == null)
             {
                 erMessage.Text = "Cake doesn't exist!";
             }
@@ -55,7 +70,10 @@ namespace ProjectBluejackCake_Group4
             {
                 int row = PromotionRepositories.updatePromo(x, title, descrption, discount);
                 loadData();
+                erMessage.Text = "Update Success!";
             }
+
+            
 
         }
 

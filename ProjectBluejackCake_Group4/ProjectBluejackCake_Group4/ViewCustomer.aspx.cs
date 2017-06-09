@@ -12,7 +12,7 @@ namespace ProjectBluejackCake_Group4
 
         void loadData()
         {
-            viewCustomerGrid.DataSource = MemberRepositories.getAllMember();
+            viewCustomerGrid.DataSource = MemberRepositories.getAllMemberOnly();
             viewCustomerGrid.DataBind();
         }
 

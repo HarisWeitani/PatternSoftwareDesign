@@ -32,7 +32,7 @@ namespace ProjectBluejackCake_Group4.Repositories
 
         public static Promotion findTitle(String title)
         {
-            return db.Promotions.Find(title);
+            return db.Promotions.Where(x => x.Title == title).FirstOrDefault();
         }
 
         public static int deletePromot(Promotion x)

@@ -24,6 +24,12 @@ namespace ProjectBluejackCake_Group4
             return db.Members.Where(m => m.Email == email && m.Password == password).FirstOrDefault();
         }
 
+        public static List<Member> getAllMemberOnly()
+        {
+            String type = "Customer";
+            return db.Members.Where(m => m.Type == type).ToList();
+        }
+
         public static int register(Member m)
         {
             db.Members.Add(m);

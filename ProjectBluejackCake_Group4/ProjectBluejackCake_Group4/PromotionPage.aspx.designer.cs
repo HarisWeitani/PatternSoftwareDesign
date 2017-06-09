@@ -38,14 +38,5 @@ namespace ProjectBluejackCake_Group4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddPromotion;
-        
-        /// <summary>
-        /// btnUpdatePromotion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdatePromotion;
     }
 }

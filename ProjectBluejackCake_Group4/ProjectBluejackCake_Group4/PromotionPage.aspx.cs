@@ -59,9 +59,11 @@ namespace ProjectBluejackCake_Group4
             Response.Redirect("AddPromotion.aspx");
         }
 
-        protected void btnUpdatePromotion_Click(object sender, EventArgs e)
+        protected void viewPromotion_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            Response.Redirect("UpdatePromotion.aspx");
+            String promoTitle = viewPromotion.Rows[e.RowIndex].Cells[0].Text;
+
+            Response.Redirect(String.Format("UpdatePromotion.aspx?promoTitle={0}", promoTitle));
         }
     }
 }
